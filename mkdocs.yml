@@ -1,0 +1,4 @@
+site_name: Api Pedidos Digitais
+nav:
+    - Início: index.md
+theme: readthedocs
