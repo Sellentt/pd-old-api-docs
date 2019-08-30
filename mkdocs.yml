@@ -1,4 +1,16 @@
 site_name: Api Pedidos Digitais
 nav:
     - Início: index.md
+    - Categorias:
+      - 'Listar': 'categories/index.md'
+      - 'Visualizar': 'categories/show.md'
+      - 'Cadastrar': 'categories/create.md'
+      - 'Alterar': 'categories/update.md'
+      - 'Remover': 'categories/delete.md'
+    - Clientes:
+      - 'Listar': 'companies/index.md'
+      - 'Visualizar': 'companies/show.md'
+      - 'Cadastrar': 'companies/create.md'
+      - 'Alterar': 'companies/update.md'
+      - 'Remover': 'companies/delete.md'
 theme: readthedocs
