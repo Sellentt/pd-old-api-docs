@@ -1,6 +1,6 @@
 Detalhes de uma categoria.
 
-**Endpoint**
+## Endpoint
 
 ```
 GET "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
@@ -10,13 +10,13 @@ GET "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 |---|---|
 | id | Id da categoria |
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 ```
 
-**Response** 
+## Response
 
 *http status code 200*
 
@@ -31,9 +31,9 @@ GET "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 }
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -43,7 +43,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -53,7 +53,7 @@ Token inválido
 }
 ```
 
-Categoria não encontrada
+**Categoria não encontrada**
 
 *Http status code 404*
 
@@ -63,7 +63,7 @@ Categoria não encontrada
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 

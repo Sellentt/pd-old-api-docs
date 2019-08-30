@@ -1,6 +1,6 @@
 Altera uma nova categoria.
 
-**Endpoint**
+## Endpoint
 
 ```
 PUT "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
@@ -10,14 +10,14 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 |---|---|
 | id | Id da categoria que será alterada |
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 "Content-Type": "application/json"
 ```
 
-**Body**
+## Body
 
 ```json
 {
@@ -34,10 +34,9 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 | is_active (*required*) | Status da categoria | 0 ou 1 |
 
 
-**Response**
+## Response
 
 *http status code 200*
-
 
 ```json
 {
@@ -50,9 +49,9 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 }
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -62,7 +61,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -72,7 +71,7 @@ Token inválido
 }
 ```
 
-Categoria não encontrada
+**Categoria não encontrada**
 
 *Http status code 404*
 
@@ -82,10 +81,9 @@ Categoria não encontrada
 }
 ```
 
-Erros nos dados enviados
+**Erros nos dados enviados**
 
 *Http status code 422*
-
 
 ```json
 {
@@ -98,7 +96,7 @@ Erros nos dados enviados
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 

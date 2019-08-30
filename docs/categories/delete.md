@@ -1,6 +1,6 @@
 Remove uma nova categoria.
 
-**Endpoint**
+## Endpoint
 
 ```
 DELETE "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
@@ -10,24 +10,23 @@ DELETE "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 |---|---|
 | id | Id da categoria que será removida |
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 ```
 
-**Response**
+## Response
 
 *http status code 200*
-
 
 ```
 empty
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -37,7 +36,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -47,7 +46,7 @@ Token inválido
 }
 ```
 
-Categoria não encontrada
+**Categoria não encontrada**
 
 *Http status code 404*
 
@@ -57,7 +56,7 @@ Categoria não encontrada
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 
