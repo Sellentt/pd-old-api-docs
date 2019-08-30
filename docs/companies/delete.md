@@ -1,6 +1,6 @@
 Remove um cliente.
 
-**Endpoint**
+## Endpoint#
 
 ```
 DELETE "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
@@ -10,13 +10,13 @@ DELETE "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 |---|---|
 | id | Id do cliente que será removido |
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 ```
 
-**Response**
+## Response
 
 *http status code 200*
 
@@ -24,9 +24,9 @@ DELETE "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 empty
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -36,7 +36,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -46,7 +46,7 @@ Token inválido
 }
 ```
 
-Cliente não encontrado.
+**Cliente não encontrado.**
 
 *Http status code 404*
 
@@ -56,7 +56,7 @@ Cliente não encontrado.
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 

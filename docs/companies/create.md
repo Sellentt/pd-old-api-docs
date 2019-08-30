@@ -1,19 +1,19 @@
 Adiciona um novo cliente.
 
-**Endpoint**
+## Endpoint
 
 ```
 POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 ```
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 "Content-Type": "application/json"
 ```
 
-**Body**
+## Body
 
 ```json
 {
@@ -38,10 +38,9 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 | group_id (*required*) | Id do grupo do tipo lojista | Deve existir |
 
 
-**Response**
+## Response
 
 *http status code 201*
-
 
 ```json
 {
@@ -55,9 +54,9 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 }
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -67,7 +66,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -77,10 +76,9 @@ Token inválido
 }
 ```
 
-Erros nos dados enviados
+**Erros nos dados enviados**
 
 *Http status code 422*
-
 
 ```json
 {
@@ -93,7 +91,7 @@ Erros nos dados enviados
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 

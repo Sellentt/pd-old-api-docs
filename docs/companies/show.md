@@ -1,6 +1,6 @@
 Detalhes de um cliente.
 
-**Endpoint**
+## Endpoint
 
 ```
 GET "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
@@ -10,13 +10,13 @@ GET "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 |---|---|
 | id | Id do cliente |
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 ```
 
-**Response** 
+## Response
 
 *http status code 200*
 
@@ -36,9 +36,9 @@ GET "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 }
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -48,7 +48,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -58,17 +58,17 @@ Token inválido
 }
 ```
 
-Categoria não encontrada
+**Cliente não encontrado**
 
 *Http status code 404*
 
 ```json
 {
-  "error": "Category not found."
+  "error": "Company not found."
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 

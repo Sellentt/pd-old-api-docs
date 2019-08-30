@@ -1,18 +1,18 @@
 Lista os clientes.
 
-**Endpoint**
+## Endpoint
 
 ```
 GET "https://app.pedidosdigitais.com.br/api/v2/companies"
 ```
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 ```
 
-**Response** 
+## Response
 
 *http status code 200*
 
@@ -71,9 +71,9 @@ GET "https://app.pedidosdigitais.com.br/api/v2/companies"
 }
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -83,7 +83,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -93,7 +93,7 @@ Token inválido
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 

@@ -1,6 +1,6 @@
 Altera um cliente.
 
-**Endpoint**
+## Endpoint
 
 ```
 PUT "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
@@ -10,14 +10,14 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 |---|---|
 | id | Id do cliente que será alterado |
 
-**Headers**
+## Headers
 
 ```
 "Authorization": "Bearer TOKEN"
 "Content-Type": "application/json"
 ```
 
-**Body**
+## Body
 
 ```json
 {
@@ -34,10 +34,9 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 | group_id (*required*) | Id do grupo | Deve ser de um grupo que existe |
 
 
-**Response**
+## Response
 
 *http status code 200*
-
 
 ```json
 {
@@ -55,9 +54,9 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/companies/{id}"
 }
 ```
 
-**Errors**
+## Errors
 
-Token não enviado
+**Token não enviado**
 
 *Http status code 401*
 
@@ -67,7 +66,7 @@ Token não enviado
 }
 ```
 
-Token inválido
+**Token inválido**
 
 *Http status code 401*
 
@@ -77,7 +76,7 @@ Token inválido
 }
 ```
 
-Cliente não encontrado
+**Cliente não encontrado**
 
 *Http status code 404*
 
@@ -87,7 +86,7 @@ Cliente não encontrado
 }
 ```
 
-Grupo não encontrad0
+**Grupo não encontrado**
 
 *Http status code 404*
 
@@ -97,10 +96,9 @@ Grupo não encontrad0
 }
 ```
 
-Erros nos dados enviados
+**Erros nos dados enviados**
 
 *Http status code 422*
-
 
 ```json
 {
@@ -113,7 +111,7 @@ Erros nos dados enviados
 }
 ```
 
-Erro interno do servidor
+**Erro interno do servidor**
 
 *Http status code 500*
 
