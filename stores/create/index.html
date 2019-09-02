@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Create - Api Pedidos Digitais</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Create";
+    var mkdocs_page_input_path = "stores/create.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Api Pedidos Digitais</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Grupos de usuários</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../groups/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../groups/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../groups/permissions/">Permissões</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Categorias</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../categories/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Clientes</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../companies/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lojas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../show/">Visualizar</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Api Pedidos Digitais</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Create</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Adiciona uma nova loja.</p>
+<h2 id="endpoint">Endpoint</h2>
+<pre><code>POST &quot;https://app.pedidosdigitais.com.br/api/v2/stores&quot;
+</code></pre>
+
+<h2 id="headers">Headers</h2>
+<pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
+&quot;Content-Type&quot;: &quot;application/json&quot;
+</code></pre>
+
+<h2 id="body">Body</h2>
+<p><strong>Atenção:</strong> Dependendo do <code>doc_type</code> enviado, o corpo do <code>json</code> pode mudar.</p>
+<p>Quando o <code>doc_type</code> for <code>cpf</code>:</p>
+<pre><code class="json">{
+    &quot;company_id&quot;: &quot;1&quot;,
+    &quot;doc_type&quot; : &quot;cpf&quot;,
+    &quot;agent_id&quot;: 1, 
+    &quot;pf_name&quot;: &quot;Nome da pessoa&quot;, 
+    &quot;pf_doc_number&quot;: &quot;07283570624&quot;, 
+    &quot;pf_reg_number&quot;: &quot;325553555&quot;,
+    &quot;address_street&quot;: &quot;Avenida 9 de Julho&quot;,
+    &quot;address_number&quot;: &quot;2510&quot;,
+    &quot;address_more&quot;: &quot;sala 12&quot;,
+    &quot;address_zipcode&quot;: &quot;01234-567&quot;,
+    &quot;address_district&quot;: &quot;Centro&quot;,
+    &quot;address_city&quot;: &quot;São Paulo&quot;,
+    &quot;address_state&quot;: &quot;SP&quot;,
+    &quot;address_street_delivery&quot;: &quot;Avenida 9 de Julho&quot;,
+    &quot;address_number_delivery&quot;: &quot;2510&quot;,
+    &quot;address_more_delivery&quot;: &quot;sala 12&quot;,
+    &quot;address_zipcode_delivery&quot;: &quot;01234-567&quot;,
+    &quot;address_district_delivery&quot;: &quot;Centro&quot;,
+    &quot;address_city_delivery&quot;: &quot;São Paulo&quot;,
+    &quot;address_state_delivery&quot;: &quot;SP&quot;,
+    &quot;phone_number_1&quot;: &quot;11912345678&quot;,
+    &quot;phone_number_2&quot;: &quot;11912345678&quot;,
+    &quot;mobile_number_1&quot; :&quot;11912345678&quot;,
+    &quot;mobile_number_2&quot; :&quot;11912345678&quot;,
+    &quot;email_1&quot;: &quot;email1@dominio.com&quot;,
+    &quot;email_2&quot;: &quot;email2@dominio.com&quot;
+}
+</code></pre>
+
+<p>Quando o <code>doc_type</code> for <code>cnpj</code>:</p>
+<pre><code class="json">{
+    &quot;company_id&quot;: &quot;1&quot;,
+    &quot;doc_type&quot; : &quot;cnpj&quot;,
+    &quot;agent_id&quot;: 1, 
+    &quot;pj_company_name&quot;: &quot;Nome da empresa&quot;, 
+    &quot;pj_name&quot;: &quot;Nome fantasia&quot;, 
+    &quot;pj_doc_number&quot;:&quot;01144667000120&quot;, 
+    &quot;pj_reg_number&quot;: &quot;001&quot;, 
+    &quot;address_street&quot;: &quot;Avenida 9 de Julho&quot;,
+    &quot;address_number&quot;: &quot;2510&quot;,
+    &quot;address_more&quot;: &quot;sala 12&quot;,
+    &quot;address_zipcode&quot;: &quot;01234-567&quot;,
+    &quot;address_district&quot;: &quot;Centro&quot;,
+    &quot;address_city&quot;: &quot;São Paulo&quot;,
+    &quot;address_state&quot;: &quot;SP&quot;,
+    &quot;address_street_delivery&quot;: &quot;Avenida 9 de Julho&quot;,
+    &quot;address_number_delivery&quot;: &quot;2510&quot;,
+    &quot;address_more_delivery&quot;: &quot;sala 12&quot;,
+    &quot;address_zipcode_delivery&quot;: &quot;01234-567&quot;,
+    &quot;address_district_delivery&quot;: &quot;Centro&quot;,
+    &quot;address_city_delivery&quot;: &quot;São Paulo&quot;,
+    &quot;address_state_delivery&quot;: &quot;SP&quot;,
+    &quot;phone_number_1&quot;: &quot;11912345678&quot;,
+    &quot;phone_number_2&quot;: &quot;11912345678&quot;,
+    &quot;mobile_number_1&quot; :&quot;11912345678&quot;,
+    &quot;mobile_number_2&quot; :&quot;11912345678&quot;,
+    &quot;email_1&quot;: &quot;email1@dominio.com&quot;,
+    &quot;email_2&quot;: &quot;email2@dominio.com&quot;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>company_id (<em>required</em>)</td>
+<td>Id do cliente/company</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>agent_id</td>
+<td>id do usuário representante</td>
+<td></td>
+</tr>
+<tr>
+<td>doc_type</td>
+<td>Tipo de documento</td>
+<td>cpf ou cnpj</td>
+</tr>
+<tr>
+<td>address_street</td>
+<td>Endereço de cobrança</td>
+<td>min 2, máx 100</td>
+</tr>
+<tr>
+<td>address_number</td>
+<td>Número do endereço de cobrança</td>
+<td>máx 20</td>
+</tr>
+<tr>
+<td>address_more</td>
+<td>Complemento do endereço de cobrança</td>
+<td>máx 100</td>
+</tr>
+<tr>
+<td>address_zipcode</td>
+<td>Cep do endereço de cobrança</td>
+<td>númérico, 99999-999 ou 99999999</td>
+</tr>
+<tr>
+<td>address_district</td>
+<td>Bairro do endereço de cobrança</td>
+<td>min 2, máx 100</td>
+</tr>
+<tr>
+<td>address_city</td>
+<td>Cidade do endereço de cobrança</td>
+<td>min 2, máx 100</td>
+</tr>
+<tr>
+<td>address_state</td>
+<td>Estado do endereço de cobrança</td>
+<td>Sigla UF</td>
+</tr>
+<tr>
+<td>address_street_delivery</td>
+<td>Endereço de entrega</td>
+<td>min 2, máx 100</td>
+</tr>
+<tr>
+<td>address_number_delivery</td>
+<td>Número do endereço de entrega</td>
+<td>máx 20</td>
+</tr>
+<tr>
+<td>address_more_delivery</td>
+<td>Complemento do endereço de entrega</td>
+<td>máx 100</td>
+</tr>
+<tr>
+<td>address_zipcode_delivery</td>
+<td>Cep do endereço de entrega</td>
+<td>númérico, 99999-999 ou 99999999</td>
+</tr>
+<tr>
+<td>address_district_delivery</td>
+<td>Bairro do endereço de entrega</td>
+<td>min 2, máx 100</td>
+</tr>
+<tr>
+<td>address_city_delivery</td>
+<td>Cidade do endereço de entrega</td>
+<td>min 2, máx 100</td>
+</tr>
+<tr>
+<td>address_state_delivery</td>
+<td>Estado do endereço de entrega</td>
+<td>Sigla UF</td>
+</tr>
+<tr>
+<td>phone_number_1</td>
+<td>Telefone 1</td>
+<td>min 9, máx 11 dígitos</td>
+</tr>
+<tr>
+<td>phone_number_2</td>
+<td>Telefone 2</td>
+<td>min 9, máx 11 dígitos</td>
+</tr>
+<tr>
+<td>mobile_number_1</td>
+<td>Celular 1</td>
+<td>min 9, máx 11 dígitos</td>
+</tr>
+<tr>
+<td>mobile_number_2</td>
+<td>Celular 2</td>
+<td>min 9, máx 11 dígitos</td>
+</tr>
+<tr>
+<td>email_1</td>
+<td>E-mail 1</td>
+<td>E-mail válido</td>
+</tr>
+<tr>
+<td>email_2</td>
+<td>E-mail 2</td>
+<td>E-mail válido</td>
+</tr>
+</tbody>
+</table>
+<h2 id="response">Response</h2>
+<p><em>http status code 201</em></p>
+<pre><code class="json">{
+  &quot;data&quot;: {
+    &quot;doc_type&quot;: &quot;cnpj&quot;,
+    &quot;name&quot;: &quot;&quot;,
+    &quot;company_name&quot;: &quot;&quot;,
+    &quot;doc_number&quot;: &quot;&quot;,
+    &quot;reg_number&quot;: &quot;&quot;,
+    &quot;address_street&quot;: &quot;Avenida 9 de Julho&quot;,
+    &quot;address_number&quot;: &quot;2510&quot;,
+    &quot;address_more&quot;: &quot;sala 12&quot;,
+    &quot;address_zipcode&quot;: &quot;01234-567&quot;,
+    &quot;address_district&quot;: &quot;Centro&quot;,
+    &quot;address_city&quot;: &quot;São Paulo&quot;,
+    &quot;address_state&quot;: &quot;SP&quot;,
+    &quot;address_street_delivery&quot;: &quot;Avenida 9 de Julho&quot;,
+    &quot;address_number_delivery&quot;: &quot;2510&quot;,
+    &quot;address_more_delivery&quot;: &quot;sala 12&quot;,
+    &quot;address_zipcode_delivery&quot;: &quot;01234-567&quot;,
+    &quot;address_district_delivery&quot;: &quot;Centro&quot;,
+    &quot;address_city_delivery&quot;: &quot;São Paulo&quot;,
+    &quot;address_state_delivery&quot;: &quot;SP&quot;,
+    &quot;phone_number_1&quot;: &quot;11912345678&quot;,
+    &quot;phone_number_2&quot;: &quot;11912345678&quot;,
+    &quot;mobile_number_1&quot;: &quot;11912345678&quot;,
+    &quot;mobile_number_2&quot;: &quot;11912345678&quot;,
+    &quot;email_1&quot;: &quot;email1@dominio.com&quot;,
+    &quot;email_2&quot;: &quot;email2@dominio.com&quot;,
+    &quot;updated_at&quot;: &quot;2019-09-02 17:11:57&quot;,
+    &quot;created_at&quot;: &quot;2019-09-02 17:11:57&quot;,
+    &quot;id&quot;: 7
+  }
+}
+</code></pre>
+
+<h2 id="errors">Errors</h2>
+<p><strong>Token não enviado</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Token not found.&quot;
+}
+</code></pre>
+
+<p><strong>Token inválido</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Invalid token.&quot;
+}
+</code></pre>
+
+<p><strong>Erros nos dados enviados</strong></p>
+<p><em>Http status code 422</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Unprocessable Entity&quot;,
+  &quot;invalid_fields&quot;: {
+    &quot;field1&quot;: &quot;Error message&quot;,
+    &quot;field2&quot;: &quot;Error message&quot;,
+    &quot;field3&quot;: &quot;Error message&quot;
+  }
+}
+</code></pre>
+
+<p><strong>Erro interno do servidor</strong></p>
+<p><em>Http status code 500</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Internal Server Error&quot;
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
