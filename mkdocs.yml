@@ -20,4 +20,5 @@ nav:
     - Lojas:
       - 'Listar': 'stores/index.md'
       - 'Visualizar': 'stores/show.md'
+      - 'Cadastrar': 'stores/create.md'
 theme: readthedocs
