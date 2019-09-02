@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Remover - Api Pedidos Digitais</title>
+  <title>Permissões - Api Pedidos Digitais</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Remover";
-    var mkdocs_page_input_path = "companies/delete.md";
+    var mkdocs_page_name = "Permiss\u00f5es";
+    var mkdocs_page_input_path = "groups/permissions.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,15 +59,30 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../groups/">Listar</a>
+    <a class="" href="../">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../groups/show/">Visualizar</a>
+    <a class="" href="../show/">Visualizar</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../groups/permissions/">Permissões</a>
+    <a class="current" href="./">Permissões</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
+    
+
+    <li class="toctree-l3"><a href="#headers">Headers</a></li>
+    
+
+    <li class="toctree-l3"><a href="#response">Response</a></li>
+    
+
+    <li class="toctree-l3"><a href="#errors">Errors</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -105,38 +120,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../">Listar</a>
+    <a class="" href="../../companies/">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../show/">Visualizar</a>
+    <a class="" href="../../companies/show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../create/">Cadastrar</a>
+    <a class="" href="../../companies/create/">Cadastrar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../update/">Alterar</a>
+    <a class="" href="../../companies/update/">Alterar</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Remover</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
-    
-
-    <li class="toctree-l3"><a href="#headers">Headers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#response">Response</a></li>
-    
-
-    <li class="toctree-l3"><a href="#errors">Errors</a></li>
-    
-
-    </ul>
+    <a class="" href="../../companies/delete/">Remover</a>
                 </li>
     </ul>
 	    </li>
@@ -163,11 +163,11 @@
     
       
         
-          <li>Clientes &raquo;</li>
+          <li>Grupos de usuários &raquo;</li>
         
       
     
-    <li>Remover</li>
+    <li>Permissões</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -177,32 +177,69 @@
           <div role="main">
             <div class="section">
               
-                <p>Remove um cliente.</p>
+                <p>Lista as permissões separados por grupo de permissão.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>DELETE &quot;https://app.pedidosdigitais.com.br/api/v2/companies/{id}&quot;
+<pre><code>&quot;https://app.pedidosdigitais.com.br/api/v2//users/groups/permissions&quot;
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th>Params</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>Id do cliente que será removido</td>
-</tr>
-</tbody>
-</table>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 </code></pre>
 
 <h2 id="response">Response</h2>
 <p><em>http status code 200</em></p>
-<pre><code>empty
+<pre><code class="json">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 19,
+      &quot;readable_name&quot;: &quot;E-mail Marketing&quot;,
+      &quot;permissions&quot;: [
+        {
+          &quot;id&quot;: 63,
+          &quot;readable_name&quot;: &quot;Configurar automatização&quot;
+        },
+        {
+          &quot;id&quot;: 64,
+          &quot;readable_name&quot;: &quot;Listar campanhas&quot;
+        },
+        {
+          &quot;id&quot;: 65,
+          &quot;readable_name&quot;: &quot;Criar campanhas&quot;
+        },
+        {
+          &quot;id&quot;: 66,
+          &quot;readable_name&quot;: &quot;Alterar campanhas&quot;
+        },
+        {
+          &quot;id&quot;: 67,
+          &quot;readable_name&quot;: &quot;Remover campanhas&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: 21,
+      &quot;readable_name&quot;: &quot;Catálogo Digital&quot;,
+      &quot;permissions&quot;: [
+        {
+          &quot;id&quot;: 74,
+          &quot;readable_name&quot;: &quot;Listar Catálogos&quot;
+        },
+        {
+          &quot;id&quot;: 75,
+          &quot;readable_name&quot;: &quot;Criar Catálogos&quot;
+        },
+        {
+          &quot;id&quot;: 76,
+          &quot;readable_name&quot;: &quot;Alterar Catálogos&quot;
+        },
+        {
+          &quot;id&quot;: 77,
+          &quot;readable_name&quot;: &quot;Remover Catálogos&quot;
+        }
+      ]
+    }
+  ]
+}
 </code></pre>
 
 <h2 id="errors">Errors</h2>
@@ -220,13 +257,6 @@
 }
 </code></pre>
 
-<p><strong>Cliente não encontrado.</strong></p>
-<p><em>Http status code 404</em></p>
-<pre><code class="json">{
-  &quot;error&quot;: &quot;Company not found.&quot;
-}
-</code></pre>
-
 <p><strong>Erro interno do servidor</strong></p>
 <p><em>Http status code 500</em></p>
 <pre><code class="json">{
@@ -240,8 +270,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../categories/" class="btn btn-neutral float-right" title="Listar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../update/" class="btn btn-neutral" title="Alterar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../show/" class="btn btn-neutral" title="Visualizar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -267,8 +299,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../update/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../show/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../categories/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
