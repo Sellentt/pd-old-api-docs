@@ -17,4 +17,7 @@ nav:
       - 'Cadastrar': 'companies/create.md'
       - 'Alterar': 'companies/update.md'
       - 'Remover': 'companies/delete.md'
+    - Lojas:
+      - 'Listar': 'stores/index.md'
+      - 'Visualizar': 'stores/show.md'
 theme: readthedocs
