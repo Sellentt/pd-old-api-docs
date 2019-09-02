@@ -1,6 +1,10 @@
 site_name: Api Pedidos Digitais
 nav:
     - Início: index.md
+    - Grupos de usuários:
+      - 'Listar': 'groups/index.md'
+      - 'Visualizar': 'groups/show.md'
+      - 'Permissões': 'groups/permissions.md'
     - Categorias:
       - 'Listar': 'categories/index.md'
       - 'Visualizar': 'categories/show.md'
