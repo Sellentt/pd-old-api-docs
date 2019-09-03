@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Visualizar - Api Pedidos Digitais</title>
+  <title>Remover - Api Pedidos Digitais</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Visualizar";
-    var mkdocs_page_input_path = "groups/show.md";
+    var mkdocs_page_name = "Remover";
+    var mkdocs_page_input_path = "stores/delete.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,30 +59,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../">Listar</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Visualizar</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
-    
-
-    <li class="toctree-l3"><a href="#headers">Headers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#response">Response</a></li>
-    
-
-    <li class="toctree-l3"><a href="#errors">Errors</a></li>
-    
-
-    </ul>
+    <a class="" href="../../groups/">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../permissions/">Permissões</a>
+    <a class="" href="../../groups/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../groups/permissions/">Permissões</a>
                 </li>
     </ul>
 	    </li>
@@ -147,23 +132,38 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../stores/">Listar</a>
+    <a class="" href="../">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../stores/show/">Visualizar</a>
+    <a class="" href="../show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../stores/create/">Cadastrar</a>
+    <a class="" href="../create/">Cadastrar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../stores/update/">Alterar</a>
+    <a class="" href="../update/">Alterar</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../stores/delete/">Remover</a>
+    <a class="current" href="./">Remover</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
+    
+
+    <li class="toctree-l3"><a href="#headers">Headers</a></li>
+    
+
+    <li class="toctree-l3"><a href="#response">Response</a></li>
+    
+
+    <li class="toctree-l3"><a href="#errors">Errors</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -190,11 +190,11 @@
     
       
         
-          <li>Grupos de usuários &raquo;</li>
+          <li>Lojas &raquo;</li>
         
       
     
-    <li>Visualizar</li>
+    <li>Remover</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -204,9 +204,9 @@
           <div role="main">
             <div class="section">
               
-                <p>Detalhes de um grupo de usuários.</p>
+                <p>Remove uma nova categoria.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>&quot;https://app.pedidosdigitais.com.br/api/v2/users/groups/{id}&quot;
+<pre><code>DELETE &quot;https://app.pedidosdigitais.com.br/api/v2/stores/{id}&quot;
 </code></pre>
 
 <table>
@@ -219,7 +219,7 @@
 <tbody>
 <tr>
 <td>id</td>
-<td>Id do grupo</td>
+<td>Id da loja que será removida</td>
 </tr>
 </tbody>
 </table>
@@ -229,83 +229,9 @@
 
 <h2 id="response">Response</h2>
 <p><em>http status code 200</em></p>
-<pre><code class="json">{
-  &quot;data&quot;: {
-    &quot;id&quot;: 1,
-    &quot;type&quot;: &quot;seller&quot;,
-    &quot;name&quot;: &quot;Lojistas Classe A&quot;,
-    &quot;metadata&quot;: {
-      &quot;diff_price&quot;: {
-        &quot;type&quot;: &quot;desc&quot;,
-        &quot;percent&quot;: 5
-      },
-      &quot;categories&quot;: [
-        {
-          &quot;id&quot;: 3,
-          &quot;name&quot;: &quot;Acessórios&quot;
-        },
-        {
-          &quot;id&quot;: 52,
-          &quot;name&quot;: &quot;Notebooks&quot;
-        }
-      ]
-    },
-    &quot;created_at&quot;: &quot;2019-08-26 08:36:04&quot;,
-    &quot;updated_at&quot;: &quot;2019-08-28 10:54:24&quot;
-  }
-}
+<pre><code>empty
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>Id do grupo</td>
-</tr>
-<tr>
-<td>type</td>
-<td>Tipo do grupo (regular, seller, agent)</td>
-</tr>
-<tr>
-<td>name</td>
-<td>Nome do grupo</td>
-</tr>
-<tr>
-<td>metadata.diff_price</td>
-<td>Grupo de configurações de preço diferenciado (pode ser null)</td>
-</tr>
-<tr>
-<td>metadata.diff_price.type</td>
-<td>Tipo de diferença de preço (desc, acresc)</td>
-</tr>
-<tr>
-<td>metadata.diff_price.percent</td>
-<td>Porcentagem de desconto ou acréscimo</td>
-</tr>
-<tr>
-<td>metadata.categories.*.id</td>
-<td>Id da categoria</td>
-</tr>
-<tr>
-<td>metadata.categories.*.name</td>
-<td>Nome da categoria</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>Data de criação do grupo</td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td>Data de alteração do grupo</td>
-</tr>
-</tbody>
-</table>
 <h2 id="errors">Errors</h2>
 <p><strong>Token não enviado</strong></p>
 <p><em>Http status code 401</em></p>
@@ -321,10 +247,10 @@
 }
 </code></pre>
 
-<p><strong>Grupo não encontrado.</strong></p>
+<p><strong>Categoria não encontrada</strong></p>
 <p><em>Http status code 404</em></p>
 <pre><code class="json">{
-  &quot;error&quot;: &quot;Group not found.&quot;
+  &quot;error&quot;: &quot;Store not found.&quot;
 }
 </code></pre>
 
@@ -341,10 +267,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../permissions/" class="btn btn-neutral float-right" title="Permissões">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../" class="btn btn-neutral" title="Listar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../update/" class="btn btn-neutral" title="Alterar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -370,10 +294,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../update/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../permissions/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
