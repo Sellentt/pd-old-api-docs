@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Cadastrar - Api Pedidos Digitais</title>
+  <title>Alterar - Api Pedidos Digitais</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Cadastrar";
-    var mkdocs_page_input_path = "stores/create.md";
+    var mkdocs_page_name = "Alterar";
+    var mkdocs_page_input_path = "stores/update.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -138,9 +138,13 @@
                     
     <a class="" href="../show/">Visualizar</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../create/">Cadastrar</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Cadastrar</a>
+    <a class="current" href="./">Alterar</a>
     <ul class="subnav">
             
     <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
@@ -159,10 +163,6 @@
     
 
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../update/">Alterar</a>
                 </li>
     </ul>
 	    </li>
@@ -193,7 +193,7 @@
         
       
     
-    <li>Cadastrar</li>
+    <li>Alterar</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -205,9 +205,23 @@
               
                 <p>Adiciona uma nova loja.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>POST &quot;https://app.pedidosdigitais.com.br/api/v2/stores&quot;
+<pre><code>PUT &quot;https://app.pedidosdigitais.com.br/api/v2/stores/{id}&quot;
 </code></pre>
 
+<table>
+<thead>
+<tr>
+<th>Params</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Id da loja que será alterada</td>
+</tr>
+</tbody>
+</table>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 &quot;Content-Type&quot;: &quot;application/json&quot;
@@ -215,11 +229,11 @@
 
 <h2 id="body">Body</h2>
 <p><strong>Atenção:</strong> Dependendo do <code>doc_type</code> enviado, o corpo do <code>json</code> pode mudar.</p>
+<p>Na alteração de loja não é possível alterar o representante.</p>
 <p>Quando o <code>doc_type</code> for <code>cpf</code>:</p>
 <pre><code class="json">{
     &quot;company_id&quot;: &quot;1&quot;,
     &quot;doc_type&quot; : &quot;cpf&quot;,
-    &quot;agent_id&quot;: 1, 
     &quot;pf_name&quot;: &quot;Nome da pessoa&quot;, 
     &quot;pf_doc_number&quot;: &quot;07283570624&quot;, 
     &quot;pf_reg_number&quot;: &quot;325553555&quot;,
@@ -250,7 +264,6 @@
 <pre><code class="json">{
     &quot;company_id&quot;: &quot;1&quot;,
     &quot;doc_type&quot; : &quot;cnpj&quot;,
-    &quot;agent_id&quot;: 1, 
     &quot;pj_company_name&quot;: &quot;Nome da empresa&quot;, 
     &quot;pj_name&quot;: &quot;Nome fantasia&quot;, 
     &quot;pj_doc_number&quot;:&quot;01144667000120&quot;, 
@@ -291,11 +304,6 @@
 <td>company_id (<em>required</em>)</td>
 <td>Id do cliente/company</td>
 <td>Obrigatório</td>
-</tr>
-<tr>
-<td>agent_id</td>
-<td>id do usuário representante</td>
-<td></td>
 </tr>
 <tr>
 <td>doc_type</td>
@@ -490,6 +498,13 @@
 }
 </code></pre>
 
+<p><strong>Loja não encontrada</strong></p>
+<p><em>Http status code 404</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Store not found.&quot;
+}
+</code></pre>
+
 <p><strong>Erros nos dados enviados</strong></p>
 <p><em>Http status code 422</em></p>
 <pre><code class="json">{
@@ -515,10 +530,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../update/" class="btn btn-neutral float-right" title="Alterar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../show/" class="btn btn-neutral" title="Visualizar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create/" class="btn btn-neutral" title="Cadastrar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -544,10 +557,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../show/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../create/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../update/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
