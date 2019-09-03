@@ -3,8 +3,12 @@ Adiciona uma nova loja.
 ## Endpoint
 
 ```
-POST "https://app.pedidosdigitais.com.br/api/v2/stores"
+PUT "https://app.pedidosdigitais.com.br/api/v2/stores/{id}"
 ```
+
+| Params | Description |
+|---|---|
+| id | Id da loja que será alterada |
 
 ## Headers
 
@@ -17,13 +21,14 @@ POST "https://app.pedidosdigitais.com.br/api/v2/stores"
 
 **Atenção:** Dependendo do `doc_type` enviado, o corpo do `json` pode mudar.
 
+Na alteração de loja não é possível alterar o representante.
+
 Quando o `doc_type` for `cpf`:
 
 ```json
 {
 	"company_id": "1",
 	"doc_type" : "cpf",
-	"agent_id": 1, 
 	"pf_name": "Nome da pessoa", 
 	"pf_doc_number": "07283570624", 
 	"pf_reg_number": "325553555",
@@ -56,7 +61,6 @@ Quando o `doc_type` for `cnpj`:
 {
 	"company_id": "1",
 	"doc_type" : "cnpj",
-	"agent_id": 1, 
 	"pj_company_name": "Nome da empresa", 
 	"pj_name": "Nome fantasia", 
 	"pj_doc_number":"01144667000120", 
@@ -87,7 +91,6 @@ Quando o `doc_type` for `cnpj`:
 | Field | Description | Rules |
 |---|---|---|
 | company_id (*required*) | Id do cliente/company | Obrigatório |
-| agent_id | id do usuário representante | |
 | doc_type | Tipo de documento | cpf ou cnpj |
 | pf_name | Nome da loja | min 2, máx 100 |
 | pf_doc_number | CPF | CPF válido |
@@ -175,6 +178,16 @@ Quando o `doc_type` for `cnpj`:
 ```json
 {
   "error": "Invalid token."
+}
+```
+
+**Loja não encontrada**
+
+*Http status code 404*
+
+```json
+{
+  "error": "Store not found."
 }
 ```
 

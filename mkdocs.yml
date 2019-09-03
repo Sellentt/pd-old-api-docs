@@ -21,4 +21,5 @@ nav:
       - 'Listar': 'stores/index.md'
       - 'Visualizar': 'stores/show.md'
       - 'Cadastrar': 'stores/create.md'
+      - 'Alterar': 'stores/update.md'
 theme: readthedocs
