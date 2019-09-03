@@ -1,4 +1,4 @@
-Remove uma nova categoria.
+Remove uma loja.
 
 ## Endpoint
 

@@ -1,4 +1,4 @@
-Remove uma nova categoria.
+Remove uma categoria.
 
 ## Endpoint
 
@@ -6,9 +6,9 @@ Remove uma nova categoria.
 DELETE "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 ```
 
-| Params | Description |
-|---|---|
-| id | Id da categoria que será removida |
+| Params | Description                       |
+| ------ | --------------------------------- |
+| id     | Id da categoria que será removida |
 
 ## Headers
 
@@ -18,7 +18,7 @@ DELETE "https://app.pedidosdigitais.com.br/api/v2/categories/{id}"
 
 ## Response
 
-*http status code 200*
+_http status code 200_
 
 ```
 empty
@@ -28,17 +28,17 @@ empty
 
 **Token não enviado**
 
-*Http status code 401*
+_Http status code 401_
 
 ```json
 {
-  "error": "Token not found."
+  "error": "Token not found."nova categoria.
 }
 ```
 
 **Token inválido**
 
-*Http status code 401*
+_Http status code 401_
 
 ```json
 {
@@ -48,7 +48,7 @@ empty
 
 **Categoria não encontrada**
 
-*Http status code 404*
+_Http status code 404_
 
 ```json
 {
@@ -58,7 +58,7 @@ empty
 
 **Erro interno do servidor**
 
-*Http status code 500*
+_Http status code 500_
 
 ```json
 {
