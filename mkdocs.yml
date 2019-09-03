@@ -1,25 +1,26 @@
 site_name: Api Pedidos Digitais
 nav:
-    - Início: index.md
-    - Grupos de usuários:
-      - 'Listar': 'groups/index.md'
-      - 'Visualizar': 'groups/show.md'
-      - 'Permissões': 'groups/permissions.md'
-    - Categorias:
-      - 'Listar': 'categories/index.md'
-      - 'Visualizar': 'categories/show.md'
-      - 'Cadastrar': 'categories/create.md'
-      - 'Alterar': 'categories/update.md'
-      - 'Remover': 'categories/delete.md'
-    - Clientes:
-      - 'Listar': 'companies/index.md'
-      - 'Visualizar': 'companies/show.md'
-      - 'Cadastrar': 'companies/create.md'
-      - 'Alterar': 'companies/update.md'
-      - 'Remover': 'companies/delete.md'
-    - Lojas:
-      - 'Listar': 'stores/index.md'
-      - 'Visualizar': 'stores/show.md'
-      - 'Cadastrar': 'stores/create.md'
-      - 'Alterar': 'stores/update.md'
+  - Início: index.md
+  - Grupos de usuários:
+      - "Listar": "groups/index.md"
+      - "Visualizar": "groups/show.md"
+      - "Permissões": "groups/permissions.md"
+  - Categorias:
+      - "Listar": "categories/index.md"
+      - "Visualizar": "categories/show.md"
+      - "Cadastrar": "categories/create.md"
+      - "Alterar": "categories/update.md"
+      - "Remover": "categories/delete.md"
+  - Clientes:
+      - "Listar": "companies/index.md"
+      - "Visualizar": "companies/show.md"
+      - "Cadastrar": "companies/create.md"
+      - "Alterar": "companies/update.md"
+      - "Remover": "companies/delete.md"
+  - Lojas:
+      - "Listar": "stores/index.md"
+      - "Visualizar": "stores/show.md"
+      - "Cadastrar": "stores/create.md"
+      - "Alterar": "stores/update.md"
+      - "Remover": "stores/delete.md"
 theme: readthedocs
