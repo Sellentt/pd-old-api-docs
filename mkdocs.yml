@@ -23,4 +23,6 @@ nav:
       - "Cadastrar": "stores/create.md"
       - "Alterar": "stores/update.md"
       - "Remover": "stores/delete.md"
+  - Uploads:
+      - "Enviar": "uploads/create.md"
 theme: readthedocs
