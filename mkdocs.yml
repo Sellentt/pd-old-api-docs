@@ -5,12 +5,9 @@ nav:
       - "Listar": "groups/index.md"
       - "Visualizar": "groups/show.md"
       - "Permissões": "groups/permissions.md"
-  - Categorias:
-      - "Listar": "categories/index.md"
-      - "Visualizar": "categories/show.md"
-      - "Cadastrar": "categories/create.md"
-      - "Alterar": "categories/update.md"
-      - "Remover": "categories/delete.md"
+  - Usuários:
+      - "Listar": "users/index.md"
+      - "Visualizar": "users/show.md"
   - Clientes:
       - "Listar": "companies/index.md"
       - "Visualizar": "companies/show.md"
@@ -23,6 +20,12 @@ nav:
       - "Cadastrar": "stores/create.md"
       - "Alterar": "stores/update.md"
       - "Remover": "stores/delete.md"
+  - Categorias:
+      - "Listar": "categories/index.md"
+      - "Visualizar": "categories/show.md"
+      - "Cadastrar": "categories/create.md"
+      - "Alterar": "categories/update.md"
+      - "Remover": "categories/delete.md"
   - Uploads:
       - "Enviar": "uploads/create.md"
 theme: readthedocs
