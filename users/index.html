@@ -18,7 +18,7 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Listar";
-    var mkdocs_page_input_path = "groups/index.md";
+    var mkdocs_page_input_path = "users/index.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -57,6 +57,25 @@
 		
     <span class="caption-text">Grupos de usuários</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../groups/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../groups/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../groups/permissions/">Permissões</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Usuários</span>
+    <ul class="subnav">
                 <li class=" current">
                     
     <a class="current" href="./">Listar</a>
@@ -68,7 +87,7 @@
     <li class="toctree-l3"><a href="#headers">Headers</a></li>
     
 
-    <li class="toctree-l3"><a href="#group-types">Group Types</a></li>
+    <li class="toctree-l3"><a href="#user-types">User Types</a></li>
     
 
     <li class="toctree-l3"><a href="#response">Response</a></li>
@@ -82,25 +101,6 @@
                 <li class="">
                     
     <a class="" href="show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="permissions/">Permissões</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Usuários</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../users/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../users/show/">Visualizar</a>
                 </li>
     </ul>
 	    </li>
@@ -219,7 +219,7 @@
     
       
         
-          <li>Grupos de usuários &raquo;</li>
+          <li>Usuários &raquo;</li>
         
       
     
@@ -233,16 +233,16 @@
           <div role="main">
             <div class="section">
               
-                <p>Lista os grupos de usuários.</p>
+                <p>Lista os usuários cadastrados.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>&quot;https://app.pedidosdigitais.com.br/api/v2/users/groups&quot;
+<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/users&quot;
 </code></pre>
 
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 </code></pre>
 
-<h2 id="group-types">Group Types</h2>
+<h2 id="user-types">User Types</h2>
 <table>
 <thead>
 <tr>
@@ -274,37 +274,68 @@
 <pre><code class="json">{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: 1,
-      &quot;type&quot;: &quot;seller&quot;,
-      &quot;name&quot;: &quot;Lojistas Classe A&quot;,
-      &quot;created_at&quot;: &quot;2019-08-26 08:36:04&quot;,
-      &quot;updated_at&quot;: &quot;2019-08-28 10:54:24&quot;
-    },
-    {
-      &quot;id&quot;: 2,
-      &quot;type&quot;: &quot;agent&quot;,
-      &quot;name&quot;: &quot;Meus Representantes&quot;,
-      &quot;created_at&quot;: &quot;2019-08-28 10:43:18&quot;,
-      &quot;updated_at&quot;: &quot;2019-08-28 10:43:18&quot;
-    },
-    {
       &quot;id&quot;: 3,
-      &quot;type&quot;: &quot;regular&quot;,
-      &quot;name&quot;: &quot;Colaboradores&quot;,
-      &quot;created_at&quot;: &quot;2019-08-28 10:53:08&quot;,
-      &quot;updated_at&quot;: &quot;2019-08-28 10:53:08&quot;
+      &quot;name&quot;: &quot;Representante 1&quot;,
+      &quot;email&quot;: &quot;rep1@domain.com.br&quot;,
+      &quot;type&quot;: &quot;agent&quot;,
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-03 08:16:12&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-03 08:16:12&quot;,
+      &quot;group&quot;: {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Meus Representantes&quot;
+      },
+      &quot;company&quot;: null
     },
     {
       &quot;id&quot;: 4,
+      &quot;name&quot;: &quot;Representante 2&quot;,
+      &quot;email&quot;: &quot;rep2@domain.com.br&quot;,
+      &quot;type&quot;: &quot;agent&quot;,
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-03 08:17:07&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-03 08:17:07&quot;,
+      &quot;group&quot;: {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Meus Representantes&quot;
+      },
+      &quot;company&quot;: null
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;name&quot;: &quot;Funcionário Loja 1&quot;,
+      &quot;email&quot;: &quot;func1@domain.com.br&quot;,
       &quot;type&quot;: &quot;seller&quot;,
-      &quot;name&quot;: &quot;Lojistas Padrão&quot;,
-      &quot;created_at&quot;: &quot;2019-08-28 10:53:52&quot;,
-      &quot;updated_at&quot;: &quot;2019-08-28 10:53:52&quot;
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-05 09:11:22&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-05 09:11:22&quot;,
+      &quot;group&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Lojista Padrão&quot;
+      },
+      &quot;company&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Total Tech&quot;
+      }
+    },
+    {
+      &quot;id&quot;: 6,
+      &quot;name&quot;: &quot;Colab1&quot;,
+      &quot;email&quot;: &quot;colab1@gmail.com&quot;,
+      &quot;type&quot;: &quot;regular&quot;,
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-05 09:56:50&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-05 09:56:50&quot;,
+      &quot;group&quot;: {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Meus Colaboradores&quot;
+      },
+      &quot;company&quot;: null
     }
   ],
   &quot;links&quot;: {
-    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/users/groups?page=1&quot;,
-    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/users/groups?page=1&quot;,
+    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/users?page=1&quot;,
+    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/users?page=1&quot;,
     &quot;prev&quot;: null,
     &quot;next&quot;: null
   },
@@ -312,7 +343,7 @@
     &quot;current_page&quot;: 1,
     &quot;from&quot;: 1,
     &quot;last_page&quot;: 1,
-    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/users/groups&quot;,
+    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/users&quot;,
     &quot;per_page&quot;: 20,
     &quot;to&quot;: 4,
     &quot;total&quot;: 4
@@ -320,7 +351,7 @@
 }
 </code></pre>
 
-<h2 id="errors">Errors</h2>
+<h1 id="errors">Errors</h1>
 <p><strong>Token não enviado</strong></p>
 <p><em>Http status code 401</em></p>
 <pre><code class="json">{
@@ -351,7 +382,7 @@
         <a href="show/" class="btn btn-neutral float-right" title="Visualizar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Início"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../groups/permissions/" class="btn btn-neutral" title="Permissões"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -377,7 +408,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../groups/permissions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="show/" style="color: #fcfcfc">Next &raquo;</a></span>
