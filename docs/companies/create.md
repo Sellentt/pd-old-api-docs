@@ -17,30 +17,21 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 
 ```json
 {
-  "data": {
-    "id": 6,
-    "code": "1026",
-    "name": "Apple Inc.",
-    "created_at": "2019-08-29 08:41:14",
-    "updated_at": "2019-08-29 08:41:14",
-    "group": {
-      "id": 1,
-      "name": "Lojistas Classe A"
-    }
-  }
+  "code": "1001",
+  "name": "Info Basics Acessórios",
+  "group_id": 1
 }
 ```
 
-| Field | Description | Rules |
-|---|---|---|
-| code (*required*) | Código único do cliente | Min 2, max 50 |
-| name (*required*) | Nome do cliente | Min 2, max 100 |
-| group_id (*required*) | Id do grupo do tipo lojista | Deve existir |
-
+| Field                 | Description                 | Rules          |
+| --------------------- | --------------------------- | -------------- |
+| code (_required_)     | Código único do cliente     | Min 2, max 50  |
+| name (_required_)     | Nome do cliente             | Min 2, max 100 |
+| group_id (_required_) | Id do grupo do tipo lojista | Deve existir   |
 
 ## Response
 
-*http status code 201*
+_http status code 201_
 
 ```json
 {
@@ -58,7 +49,7 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 
 **Token não enviado**
 
-*Http status code 401*
+_Http status code 401_
 
 ```json
 {
@@ -68,7 +59,7 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 
 **Token inválido**
 
-*Http status code 401*
+_Http status code 401_
 
 ```json
 {
@@ -78,7 +69,7 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 
 **Erros nos dados enviados**
 
-*Http status code 422*
+_Http status code 422_
 
 ```json
 {
@@ -93,12 +84,10 @@ POST "https://app.pedidosdigitais.com.br/api/v2/companies"
 
 **Erro interno do servidor**
 
-*Http status code 500*
+_Http status code 500_
 
 ```json
 {
   "error": "Internal Server Error"
 }
 ```
-
-
