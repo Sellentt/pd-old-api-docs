@@ -148,6 +148,16 @@ _Http status code 401_
 }
 ```
 
+**O usuário não foi encontrado**
+
+_Http status code 401_
+
+```json
+{
+  "error": "User not found."
+}
+```
+
 **O grupo do usuário não foi encontrado**
 
 _Http status code 401_

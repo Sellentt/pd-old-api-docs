@@ -10,6 +10,7 @@ nav:
       - "Visualizar": "users/show.md"
       - "Cadastrar": "users/create.md"
       - "Alterar": "users/update.md"
+      - "Remover": "users/delete.md"
   - Clientes:
       - "Listar": "companies/index.md"
       - "Visualizar": "companies/show.md"
