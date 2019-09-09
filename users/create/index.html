@@ -106,6 +106,10 @@
 
     </ul>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../update/">Alterar</a>
+                </li>
     </ul>
 	    </li>
           
@@ -326,6 +330,11 @@
 <td>Deve ser um e-mail válido e único</td>
 </tr>
 <tr>
+<td>password (<em>required</em>)</td>
+<td>Senha</td>
+<td>min 6, máx 20</td>
+</tr>
+<tr>
 <td>send_credentials</td>
 <td>Enviar credencias?</td>
 <td>0 = Não, 1 = Sim</td>
@@ -372,9 +381,9 @@
 <td>min 2, máx 50</td>
 </tr>
 <tr>
-<td>group_id (<em>required</em>)</td>
-<td>Id do grupo deste usuário</td>
-<td>Numérico e deve ser o id de um grupo existente e do mesmo tipo do usuário cadastrado</td>
+<td>company_id (<em>required</em>)</td>
+<td>Id do cliente</td>
+<td>Numérico e deve ser o id de um cliente existente</td>
 </tr>
 <tr>
 <td>phone_number</td>
@@ -390,6 +399,11 @@
 <td>email (<em>required</em>)</td>
 <td>E-mail / Login do usuário</td>
 <td>Deve ser um e-mail válido e único</td>
+</tr>
+<tr>
+<td>password (<em>required</em>)</td>
+<td>Senha</td>
+<td>min 6, máx 20</td>
 </tr>
 <tr>
 <td>send_credentials</td>
@@ -484,7 +498,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../companies/" class="btn btn-neutral float-right" title="Listar">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../update/" class="btn btn-neutral float-right" title="Alterar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../show/" class="btn btn-neutral" title="Visualizar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -516,7 +530,7 @@
         <span><a href="../show/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../companies/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../update/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

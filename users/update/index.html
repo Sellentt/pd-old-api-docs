@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Remover - Api Pedidos Digitais</title>
+  <title>Alterar - Api Pedidos Digitais</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Remover";
-    var mkdocs_page_input_path = "stores/delete.md";
+    var mkdocs_page_name = "Alterar";
+    var mkdocs_page_input_path = "users/update.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -78,19 +78,37 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../users/">Listar</a>
+    <a class="" href="../">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../users/show/">Visualizar</a>
+    <a class="" href="../show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../users/create/">Cadastrar</a>
+    <a class="" href="../create/">Cadastrar</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../users/update/">Alterar</a>
+    <a class="current" href="./">Alterar</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
+    
+
+    <li class="toctree-l3"><a href="#headers">Headers</a></li>
+    
+
+    <li class="toctree-l3"><a href="#body">Body</a></li>
+    
+
+    <li class="toctree-l3"><a href="#response">Response</a></li>
+    
+
+    <li class="toctree-l3"><a href="#errors">Errors</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -128,38 +146,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../">Listar</a>
+    <a class="" href="../../stores/">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../show/">Visualizar</a>
+    <a class="" href="../../stores/show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../create/">Cadastrar</a>
+    <a class="" href="../../stores/create/">Cadastrar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../update/">Alterar</a>
+    <a class="" href="../../stores/update/">Alterar</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Remover</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
-    
-
-    <li class="toctree-l3"><a href="#headers">Headers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#response">Response</a></li>
-    
-
-    <li class="toctree-l3"><a href="#errors">Errors</a></li>
-    
-
-    </ul>
+    <a class="" href="../../stores/delete/">Remover</a>
                 </li>
     </ul>
 	    </li>
@@ -224,11 +227,11 @@
     
       
         
-          <li>Lojas &raquo;</li>
+          <li>Usuários &raquo;</li>
         
       
     
-    <li>Remover</li>
+    <li>Alterar</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -238,9 +241,9 @@
           <div role="main">
             <div class="section">
               
-                <p>Remove uma loja.</p>
+                <p>Adiciona um novo usuário.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>DELETE &quot;https://app.pedidosdigitais.com.br/api/v2/stores/{id}&quot;
+<pre><code>POST &quot;https://app.pedidosdigitais.com.br/api/v2/users/{id}&quot;
 </code></pre>
 
 <table>
@@ -253,17 +256,218 @@
 <tbody>
 <tr>
 <td>id</td>
-<td>Id da loja que será removida</td>
+<td>Id do usuário</td>
 </tr>
 </tbody>
 </table>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
+&quot;Content-Type&quot;: &quot;application/json&quot;
 </code></pre>
 
+<h2 id="body">Body</h2>
+<p>Existem 3 tipos de usuários que você pode alterar no Pedidos Digitais. Na tabela abaixo você encontra cada um destes tipos e uma explicação sobre cada um deles.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>regular</td>
+<td>Usuário padrão que terá acesso ao painel de controle</td>
+</tr>
+<tr>
+<td>agent</td>
+<td>Usuário representante, terá acesso ao painel como um usuário regular e também tem acesso via app para celular</td>
+</tr>
+<tr>
+<td>seller</td>
+<td>Usuário lojista que terá acesso a loja virtual</td>
+</tr>
+</tbody>
+</table>
+<p>Existe uma pequena diferença no <code>payload</code> enviado dependendo do <code>type</code> que você enviar.</p>
+<p><strong>Para usuários com type: regular | agent</strong></p>
+<pre><code class="json">{
+  &quot;type&quot;: &quot;regular&quot;,
+  &quot;name&quot;: &quot;John Due&quot;,
+  &quot;group_id&quot;: 17,
+  &quot;phone_number&quot;: &quot;11555555555&quot;,
+  &quot;mobile_number&quot;: &quot;11555555555&quot;,
+  &quot;email&quot;: &quot;email@domain.com&quot;,
+  &quot;change_password&quot;: 1,
+  &quot;password&quot;: &quot;secret&quot;,
+  &quot;send_credentials&quot;: 1,
+  &quot;is_active&quot;: 1
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type (<em>required</em>)</td>
+<td>Tipo de usuário</td>
+<td>regular, agent, seller</td>
+</tr>
+<tr>
+<td>name (<em>required</em>)</td>
+<td>Nome do usuário</td>
+<td>min 2, máx 50</td>
+</tr>
+<tr>
+<td>group_id (<em>required</em>)</td>
+<td>Id do grupo deste usuário</td>
+<td>Numérico e deve ser o id de um grupo existente e do mesmo tipo do usuário cadastrado</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>Telefone do usuário</td>
+<td>min 10, máx 11</td>
+</tr>
+<tr>
+<td>mobile_number</td>
+<td>Celular do usuário</td>
+<td>min 10, máx 11</td>
+</tr>
+<tr>
+<td>email (<em>required</em>)</td>
+<td>E-mail / Login do usuário</td>
+<td>Deve ser um e-mail válido e único</td>
+</tr>
+<tr>
+<td>change_password</td>
+<td>Se quer mudar a senha</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Senha</td>
+<td>min 6, máx 20 - Obrigatório se change_password for 1</td>
+</tr>
+<tr>
+<td>send_credentials</td>
+<td>Enviar credencias?</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>Usuário ativado?</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Para usuários com type: seller</strong></p>
+<pre><code class="json">{
+  &quot;type&quot;: &quot;seller&quot;,
+  &quot;name&quot;: &quot;John Due&quot;,
+  &quot;company_id&quot;: 85,
+  &quot;phone_number&quot;: &quot;11555555555&quot;,
+  &quot;mobile_number&quot;: &quot;11555555555&quot;,
+  &quot;email&quot;: &quot;email@domain.com&quot;,
+  &quot;change_password&quot;: 1,
+  &quot;password&quot;: &quot;secret&quot;,
+  &quot;send_credentials&quot;: 1,
+  &quot;automation_subscribe&quot;: 1,
+  &quot;is_active&quot;: 1
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type (<em>required</em>)</td>
+<td>Tipo de usuário</td>
+<td>regular, agent, seller</td>
+</tr>
+<tr>
+<td>name (<em>required</em>)</td>
+<td>Nome do usuário</td>
+<td>min 2, máx 50</td>
+</tr>
+<tr>
+<td>company_id (<em>required</em>)</td>
+<td>Id do cliente</td>
+<td>Numérico e deve ser o id de um cliente existente</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>Telefone do usuário</td>
+<td>min 10, máx 11</td>
+</tr>
+<tr>
+<td>mobile_number</td>
+<td>Celular do usuário</td>
+<td>min 10, máx 11</td>
+</tr>
+<tr>
+<td>email (<em>required</em>)</td>
+<td>E-mail / Login do usuário</td>
+<td>Deve ser um e-mail válido e único</td>
+</tr>
+<tr>
+<td>change_password</td>
+<td>Se quer mudar a senha</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Senha</td>
+<td>min 6, máx 20 - Obrigatório se change_password for 1</td>
+</tr>
+<tr>
+<td>send_credentials</td>
+<td>Enviar credencias?</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+<tr>
+<td>automation_subscribe</td>
+<td>Receberá automatizações de e-mail?</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>Usuário ativado?</td>
+<td>0 = Não, 1 = Sim</td>
+</tr>
+</tbody>
+</table>
 <h2 id="response">Response</h2>
-<p><em>http status code 200</em></p>
-<pre><code>empty
+<p><em>http status code 201</em></p>
+<pre><code class="json">{
+  &quot;data&quot;: {
+    &quot;id&quot;: 38,
+    &quot;name&quot;: &quot;John Due&quot;,
+    &quot;type&quot;: &quot;regular&quot;,
+    &quot;is_active&quot;: null,
+    &quot;created_at&quot;: &quot;2019-09-06 15:49:46&quot;,
+    &quot;updated_at&quot;: &quot;2019-09-06 15:49:46&quot;,
+    &quot;group&quot;: {
+      &quot;id&quot;: 123,
+      &quot;name&quot;: &quot;Group Name&quot;
+    },
+    &quot;company&quot;: {
+      &quot;id&quot;: 456,
+      &quot;name&quot;: &quot;Company Name&quot;
+    }
+  }
+}
 </code></pre>
 
 <h2 id="errors">Errors</h2>
@@ -281,10 +485,29 @@
 }
 </code></pre>
 
-<p><strong>Categoria não encontrada</strong></p>
-<p><em>Http status code 404</em></p>
+<p><strong>Número máximo de usuários</strong></p>
+<p><em>Http status code 401</em></p>
 <pre><code class="json">{
-  &quot;error&quot;: &quot;Store not found.&quot;
+  &quot;error&quot;: &quot;Max users exceeded.&quot;
+}
+</code></pre>
+
+<p><strong>O grupo do usuário não foi encontrado</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;User group not found.&quot;
+}
+</code></pre>
+
+<p><strong>Erros nos dados enviados</strong></p>
+<p><em>Http status code 422</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Unprocessable Entity&quot;,
+  &quot;invalid_fields&quot;: {
+    &quot;field1&quot;: &quot;Error message.&quot;,
+    &quot;field2&quot;: &quot;Error message.&quot;,
+    &quot;field3&quot;: &quot;Error message.&quot;
+  }
 }
 </code></pre>
 
@@ -301,10 +524,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../categories/" class="btn btn-neutral float-right" title="Listar">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../companies/" class="btn btn-neutral float-right" title="Listar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../update/" class="btn btn-neutral" title="Alterar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create/" class="btn btn-neutral" title="Cadastrar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -330,10 +553,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../update/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../create/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../categories/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../companies/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
