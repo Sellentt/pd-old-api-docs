@@ -3,8 +3,12 @@ Adiciona um novo usuário.
 ## Endpoint
 
 ```
-POST "https://app.pedidosdigitais.com.br/api/v2/users"
+POST "https://app.pedidosdigitais.com.br/api/v2/users/{id}"
 ```
+
+| Params | Description   |
+| ------ | ------------- |
+| id     | Id do usuário |
 
 ## Headers
 
@@ -15,7 +19,7 @@ POST "https://app.pedidosdigitais.com.br/api/v2/users"
 
 ## Body
 
-Existem 3 tipos de usuários que você pode cadastrar no Pedidos Digitais. Na tabela abaixo você encontra cada um destes tipos e uma explicação sobre cada um deles.
+Existem 3 tipos de usuários que você pode alterar no Pedidos Digitais. Na tabela abaixo você encontra cada um destes tipos e uma explicação sobre cada um deles.
 
 | Type    | Description                                                                                                   |
 | ------- | ------------------------------------------------------------------------------------------------------------- |
@@ -35,6 +39,7 @@ Existe uma pequena diferença no `payload` enviado dependendo do `type` que voc�
   "phone_number": "11555555555",
   "mobile_number": "11555555555",
   "email": "email@domain.com",
+  "change_password": 1,
   "password": "secret",
   "send_credentials": 1,
   "is_active": 1
@@ -49,7 +54,8 @@ Existe uma pequena diferença no `payload` enviado dependendo do `type` que voc�
 | phone_number          | Telefone do usuário       | min 10, máx 11                                                                       |
 | mobile_number         | Celular do usuário        | min 10, máx 11                                                                       |
 | email (_required_)    | E-mail / Login do usuário | Deve ser um e-mail válido e único                                                    |
-| password (_required_) | Senha                     | min 6, máx 20                                                                        |
+| change_password       | Se quer mudar a senha     | 0 = Não, 1 = Sim                                                                     |
+| password              | Senha                     | min 6, máx 20 - Obrigatório se change_password for 1                                 |
 | send_credentials      | Enviar credencias?        | 0 = Não, 1 = Sim                                                                     |
 | is_active             | Usuário ativado?          | 0 = Não, 1 = Sim                                                                     |
 
@@ -63,6 +69,7 @@ Existe uma pequena diferença no `payload` enviado dependendo do `type` que voc�
   "phone_number": "11555555555",
   "mobile_number": "11555555555",
   "email": "email@domain.com",
+  "change_password": 1,
   "password": "secret",
   "send_credentials": 1,
   "automation_subscribe": 1,
@@ -70,18 +77,19 @@ Existe uma pequena diferença no `payload` enviado dependendo do `type` que voc�
 }
 ```
 
-| Field                   | Description                        | Rules                                            |
-| ----------------------- | ---------------------------------- | ------------------------------------------------ |
-| type (_required_)       | Tipo de usuário                    | regular, agent, seller                           |
-| name (_required_)       | Nome do usuário                    | min 2, máx 50                                    |
-| company_id (_required_) | Id do cliente                      | Numérico e deve ser o id de um cliente existente |
-| phone_number            | Telefone do usuário                | min 10, máx 11                                   |
-| mobile_number           | Celular do usuário                 | min 10, máx 11                                   |
-| email (_required_)      | E-mail / Login do usuário          | Deve ser um e-mail válido e único                |
-| password (_required_)   | Senha                              | min 6, máx 20                                    |
-| send_credentials        | Enviar credencias?                 | 0 = Não, 1 = Sim                                 |
-| automation_subscribe    | Receberá automatizações de e-mail? | 0 = Não, 1 = Sim                                 |
-| is_active               | Usuário ativado?                   | 0 = Não, 1 = Sim                                 |
+| Field                   | Description                        | Rules                                                |
+| ----------------------- | ---------------------------------- | ---------------------------------------------------- |
+| type (_required_)       | Tipo de usuário                    | regular, agent, seller                               |
+| name (_required_)       | Nome do usuário                    | min 2, máx 50                                        |
+| company_id (_required_) | Id do cliente                      | Numérico e deve ser o id de um cliente existente     |
+| phone_number            | Telefone do usuário                | min 10, máx 11                                       |
+| mobile_number           | Celular do usuário                 | min 10, máx 11                                       |
+| email (_required_)      | E-mail / Login do usuário          | Deve ser um e-mail válido e único                    |
+| change_password         | Se quer mudar a senha              | 0 = Não, 1 = Sim                                     |
+| password                | Senha                              | min 6, máx 20 - Obrigatório se change_password for 1 |
+| send_credentials        | Enviar credencias?                 | 0 = Não, 1 = Sim                                     |
+| automation_subscribe    | Receberá automatizações de e-mail? | 0 = Não, 1 = Sim                                     |
+| is_active               | Usuário ativado?                   | 0 = Não, 1 = Sim                                     |
 
 ## Response
 

@@ -9,6 +9,7 @@ nav:
       - "Listar": "users/index.md"
       - "Visualizar": "users/show.md"
       - "Cadastrar": "users/create.md"
+      - "Alterar": "users/update.md"
   - Clientes:
       - "Listar": "companies/index.md"
       - "Visualizar": "companies/show.md"
