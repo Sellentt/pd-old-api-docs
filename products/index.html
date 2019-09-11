@@ -18,7 +18,7 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Listar";
-    var mkdocs_page_input_path = "stores/index.md";
+    var mkdocs_page_input_path = "products/index.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -130,40 +130,25 @@
 		
     <span class="caption-text">Lojas</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Listar</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
-    
-
-    <li class="toctree-l3"><a href="#headers">Headers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#response">Response</a></li>
-    
-
-    <li class="toctree-l3"><a href="#errors">Errors</a></li>
-    
-
-    </ul>
+    <a class="" href="../stores/">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="show/">Visualizar</a>
+    <a class="" href="../stores/show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="create/">Cadastrar</a>
+    <a class="" href="../stores/create/">Cadastrar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="update/">Alterar</a>
+    <a class="" href="../stores/update/">Alterar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="delete/">Remover</a>
+    <a class="" href="../stores/delete/">Remover</a>
                 </li>
     </ul>
 	    </li>
@@ -199,9 +184,28 @@
 		
     <span class="caption-text">Produtos</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../products/">Listar</a>
+    <a class="current" href="./">Listar</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
+    
+
+    <li class="toctree-l3"><a href="#query-strings-filters">Query strings (Filters)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#headers">Headers</a></li>
+        
+            <li><a class="toctree-l4" href="#response">Response</a></li>
+        
+            <li><a class="toctree-l4" href="#errors">Errors</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -239,7 +243,7 @@
     
       
         
-          <li>Lojas &raquo;</li>
+          <li>Produtos &raquo;</li>
         
       
     
@@ -253,11 +257,42 @@
           <div role="main">
             <div class="section">
               
-                <p>Lista as lojas.</p>
+                <p>Listar os produtos de um cliente.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/stores&quot;
+<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/products&quot;
 </code></pre>
 
+<h1 id="query-strings-filters">Query strings (Filters)</h1>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>after</td>
+<td>date (YYYY-MM-DDTHH:MM:SS)</td>
+<td>Dos produtos alterados desta data em diante (ex: 2019-09-05T12:00:00)</td>
+</tr>
+<tr>
+<td>page</td>
+<td>integer</td>
+<td>Paginação dos produtos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observações</strong></p>
+<p>Quando é enviado o parâmetro <code>after</code> o sistema irá retornar todos os produtos que foram alterados desta data em diante, inclusive os produtos que foram <em>"removidos"</em>.</p>
+<p>Você pode identificar que um produto foi removido caso exista na chave <code>deleted_at</code> um valor preenchido. Esse valor é a data/hora que o produto foi removido.</p>
+<p>Veja abaixo um exemplo usando os dois parâmetros:</p>
+<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/products?page=1&amp;after=2019-09-10&quot;
+</code></pre>
+
+<p>Na requisição acima, o sistema irá retornar a primeira página (20 registros por página) dos produtos que foram alterados ou removidos do dia 10/09/2019 em diante.</p>
+<p>Passar o parâmetro <code>after</code> é uma ótima forma de criar uma rotina que irá atualizar seu sistema de tempos em tempos caso o cliente tenha feito alguma alteração de produto direto no painel do Pedidos Digitais.</p>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 </code></pre>
@@ -267,45 +302,87 @@
 <pre><code class="json">{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: 1,
-      &quot;name&quot;: &quot;Cliente 1&quot;,
-      &quot;company_name&quot;: &quot;&quot;,
-      &quot;doc_type&quot;: &quot;cpf&quot;,
-      &quot;doc_number&quot;: &quot;072.835.706-24&quot;,
-      &quot;reg_number&quot;: &quot;&quot;,
-      &quot;address_street&quot;: &quot;&quot;,
-      &quot;address_number&quot;: &quot;&quot;,
-      &quot;address_more&quot;: &quot;&quot;,
-      &quot;address_zipcode&quot;: &quot;&quot;,
-      &quot;address_district&quot;: &quot;&quot;,
-      &quot;address_city&quot;: &quot;&quot;,
-      &quot;address_state&quot;: &quot;&quot;,
-      &quot;address_street_delivery&quot;: &quot;&quot;,
-      &quot;address_number_delivery&quot;: &quot;&quot;,
-      &quot;address_more_delivery&quot;: &quot;&quot;,
-      &quot;address_zipcode_delivery&quot;: &quot;&quot;,
-      &quot;address_district_delivery&quot;: &quot;&quot;,
-      &quot;address_city_delivery&quot;: &quot;&quot;,
-      &quot;address_state_delivery&quot;: &quot;&quot;,
-      &quot;phone_number_1&quot;: &quot;&quot;,
-      &quot;phone_number_2&quot;: &quot;&quot;,
-      &quot;mobile_number_1&quot;: &quot;&quot;,
-      &quot;mobile_number_2&quot;: &quot;&quot;,
-      &quot;email_1&quot;: &quot;&quot;,
-      &quot;email_2&quot;: &quot;&quot;,
-      &quot;created_at&quot;: &quot;2019-08-26 08:36:57&quot;,
-      &quot;updated_at&quot;: &quot;2019-08-26 10:37:58&quot;,
-      &quot;company&quot;: {
-        &quot;id&quot;: 1,
-        &quot;code&quot;: &quot;1020&quot;,
-        &quot;name&quot;: &quot;Cliente 1&quot;
+      &quot;id&quot;: 3,
+      &quot;code&quot;: &quot;1005&quot;,
+      &quot;name&quot;: &quot;Produto de teste completamento preenchido&quot;,
+      &quot;average_weight&quot;: &quot;12.55&quot;,
+      &quot;price&quot;: {
+        &quot;default&quot;: &quot;1850.79&quot;
       },
-      &quot;agents&quot;: []
+      &quot;category&quot;: {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Samsung&quot;
+      },
+      &quot;images&quot;: [
+        {
+          &quot;id&quot;: 3,
+          &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/image.jpg&quot;,
+          &quot;default&quot;: 1
+        }
+      ],
+      &quot;video&quot;: &quot;https://www.youtube.com/watch?v=CODE&quot;,
+      &quot;description&quot;: {
+        &quot;text&quot;: &quot;Minha descrição em texto simples.&quot;,
+        &quot;html&quot;: &quot;&lt;p&gt;Minha &lt;strong&gt;descri&amp;ccedil;&amp;atilde;o&lt;/strong&gt; em &lt;em&gt;HTML&lt;/em&gt;.&lt;/p&gt;&quot;
+      },
+      &quot;variations&quot;: [
+        {
+          &quot;type&quot;: &quot;select&quot;,
+          &quot;slug&quot;: &quot;cor&quot;,
+          &quot;name&quot;: &quot;Cor&quot;,
+          &quot;options&quot;: [&quot;Azul&quot;, &quot;*Amarelo&quot;, &quot;Vermelho&quot;, &quot;Verde&quot;]
+        },
+        {
+          &quot;type&quot;: &quot;radio&quot;,
+          &quot;slug&quot;: &quot;tamanho&quot;,
+          &quot;name&quot;: &quot;Tamanho&quot;,
+          &quot;options&quot;: [&quot;Pequeno&quot;, &quot;Médio&quot;, &quot;Grande&quot;]
+        },
+        {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;slug&quot;: &quot;gravura&quot;,
+          &quot;name&quot;: &quot;Gravura&quot;,
+          &quot;options&quot;: [&quot;50&quot;]
+        },
+        {
+          &quot;type&quot;: &quot;image&quot;,
+          &quot;slug&quot;: &quot;estampa&quot;,
+          &quot;name&quot;: &quot;Estampa&quot;,
+          &quot;options&quot;: [
+            {
+              &quot;value&quot;: &quot;Imagem 1&quot;,
+              &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-5.jpg&quot;
+            },
+            {
+              &quot;value&quot;: &quot;Imagem 2&quot;,
+              &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-6.jpg&quot;
+            }
+          ]
+        }
+      ],
+      &quot;catalog&quot;: {
+        &quot;is_catalog&quot;: 1,
+        &quot;title&quot;: &quot;Título para o catálogo&quot;,
+        &quot;collection&quot;: &quot;Coleção Verão&quot;,
+        &quot;description&quot;: &quot;Descrição em texto simples para o catálogo.&quot;,
+        &quot;price&quot;: {
+          &quot;default&quot;: &quot;2250.99&quot;,
+          &quot;offer&quot;: &quot;1850.79&quot;
+        },
+        &quot;image&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/catalog/500x500/2019-06-28-164720.jpg&quot;
+      },
+      &quot;has_stock&quot;: 1,
+      &quot;is_featured&quot;: 1,
+      &quot;is_automated&quot;: 1,
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-10 12:12:51&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-10 12:12:51&quot;,
+      &quot;deleted_at&quot;: &quot;&quot;
     }
   ],
   &quot;links&quot;: {
-    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/stores?page=1&quot;,
-    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/stores?page=1&quot;,
+    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/products?page=1&quot;,
+    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/products?page=1&quot;,
     &quot;prev&quot;: null,
     &quot;next&quot;: null
   },
@@ -313,15 +390,15 @@
     &quot;current_page&quot;: 1,
     &quot;from&quot;: 1,
     &quot;last_page&quot;: 1,
-    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/stores&quot;,
+    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/products&quot;,
     &quot;per_page&quot;: 20,
-    &quot;to&quot;: 1,
-    &quot;total&quot;: 1
+    &quot;to&quot;: 3,
+    &quot;total&quot;: 3
   }
 }
 </code></pre>
 
-<h1 id="errors">Errors</h1>
+<h2 id="errors">Errors</h2>
 <p><strong>Token não enviado</strong></p>
 <p><em>Http status code 401</em></p>
 <pre><code class="json">{
@@ -349,10 +426,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="show/" class="btn btn-neutral float-right" title="Visualizar">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../uploads/create/" class="btn btn-neutral float-right" title="Enviar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../companies/delete/" class="btn btn-neutral" title="Remover"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../categories/delete/" class="btn btn-neutral" title="Remover"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -378,10 +455,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../companies/delete/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../categories/delete/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="show/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../uploads/create/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
