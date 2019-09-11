@@ -29,6 +29,8 @@ nav:
       - "Cadastrar": "categories/create.md"
       - "Alterar": "categories/update.md"
       - "Remover": "categories/delete.md"
+  - Produtos:
+      - "Listar": "products/index.md"
   - Uploads:
       - "Enviar": "uploads/create.md"
 theme: readthedocs
