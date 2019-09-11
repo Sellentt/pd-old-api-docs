@@ -32,6 +32,7 @@ nav:
   - Produtos:
       - "Listar": "products/index.md"
       - "Visualizar": "products/show.md"
+      - "Remover": "products/delete.md"
   - Uploads:
       - "Enviar": "uploads/create.md"
 theme: readthedocs
