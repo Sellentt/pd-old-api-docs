@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Create - Api Pedidos Digitais</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Create";
+    var mkdocs_page_input_path = "products/create.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Api Pedidos Digitais</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Grupos de usuários</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../groups/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../groups/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../groups/permissions/">Permissões</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Usuários</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../users/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../users/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../users/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../users/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../users/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Clientes</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../companies/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../companies/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lojas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../stores/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Categorias</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../categories/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../categories/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Produtos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Uploads</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../uploads/create/">Enviar</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Api Pedidos Digitais</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Create</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Adiciona um novo produto.</p>
+<h2 id="endpoint">Endpoint</h2>
+<pre><code>POST &quot;https://app.pedidosdigitais.com.br/api/v2/products&quot;
+</code></pre>
+
+<h2 id="headers">Headers</h2>
+<pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
+&quot;Content-Type&quot;: &quot;application/json&quot;
+</code></pre>
+
+<h2 id="body">Body</h2>
+<pre><code class="json">{
+  &quot;code&quot;: &quot;CODE&quot;,
+  &quot;name&quot;: &quot;Nome do produto&quot;,
+  &quot;average_weight&quot;: 1.85,
+  &quot;price&quot;: {
+    &quot;default&quot;: 1580.95
+  },
+  &quot;category_id&quot;: 1,
+  &quot;images&quot;: [
+    {
+      &quot;file_id&quot;: 1,
+      &quot;default&quot;: 0
+    },
+    {
+      &quot;file_id&quot;: 2,
+      &quot;default&quot;: 1
+    },
+    {
+      &quot;file_id&quot;: 3,
+      &quot;default&quot;: 0
+    }
+  ],
+  &quot;video&quot;: &quot;https://www.youtube.com/watch?v=KG54us1diCw&quot;,
+  &quot;description&quot;: {
+    &quot;text&quot;: &quot;text description&quot;,
+    &quot;html&quot;: &quot;html description&quot;
+  },
+  &quot;variations&quot;: [
+    {
+      &quot;type&quot;: &quot;select&quot;,
+      &quot;name&quot;: &quot;Cor&quot;,
+      &quot;options&quot;: [
+        {
+          &quot;value&quot;: &quot;Azul&quot;,
+          &quot;default&quot;: 0
+        },
+        {
+          &quot;value&quot;: &quot;Amarelo&quot;,
+          &quot;default&quot;: 1
+        },
+        {
+          &quot;value&quot;: &quot;Vermelho&quot;,
+          &quot;default&quot;: 0
+        }
+      ]
+    },
+    {
+      &quot;type&quot;: &quot;radio&quot;,
+      &quot;name&quot;: &quot;Tamanho&quot;,
+      &quot;options&quot;: [
+        {
+          &quot;value&quot;: &quot;Pequeno&quot;,
+          &quot;default&quot;: 0
+        },
+        {
+          &quot;value&quot;: &quot;Médio&quot;,
+          &quot;default&quot;: 0
+        },
+        {
+          &quot;value&quot;: &quot;Grande&quot;,
+          &quot;default&quot;: 0
+        }
+      ]
+    },
+    {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;name&quot;: &quot;Gravura&quot;,
+      &quot;maxlength&quot;: 50
+    },
+    {
+      &quot;type&quot;: &quot;image&quot;,
+      &quot;name&quot;: &quot;Textura&quot;,
+      &quot;options&quot;: [
+        {
+          &quot;value&quot;: &quot;Textura 1&quot;,
+          &quot;file_id&quot;: 1
+        },
+        {
+          &quot;value&quot;: &quot;Textura 2&quot;,
+          &quot;file_id&quot;: 2
+        },
+        {
+          &quot;value&quot;: &quot;Textura 3&quot;,
+          &quot;file_id&quot;: 8
+        }
+      ]
+    }
+  ],
+  &quot;catalog&quot;: {
+    &quot;title&quot;: &quot;Teste&quot;,
+    &quot;collection&quot;: &quot;2018&quot;,
+    &quot;description&quot;: &quot;Descrição de teste&quot;,
+    &quot;price&quot;: {
+      &quot;default&quot;: 29.9,
+      &quot;offer&quot;: 19.95
+    },
+    &quot;file_id&quot;: 5
+  },
+  &quot;has_stock&quot;: 1,
+  &quot;is_featured&quot;: 0,
+  &quot;is_automated&quot;: 0,
+  &quot;is_active&quot;: 1
+}
+</code></pre>
+
+<p>| XXXX | YYYY | Regras |</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>Código do produto</td>
+<td>Obrigatório, mín 3, máx 30, único</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome do produto</td>
+<td>Obrigatório, mín 2, máx 150</td>
+</tr>
+<tr>
+<td>average_weight</td>
+<td>Peso médio do produto</td>
+<td>Numérico, min 0.01, máx 10000000</td>
+</tr>
+<tr>
+<td>price.default</td>
+<td>Valor do produto</td>
+<td>Obrigatório, numérico, máx 10000000</td>
+</tr>
+<tr>
+<td>category_id</td>
+<td>Id da categoria do produto</td>
+<td>Obrigatório, numérico, Id deve existir</td>
+</tr>
+<tr>
+<td>images[].file_id</td>
+<td>Id do arquivo enviado na api de uploads</td>
+<td>Id do upload de arquivo deve existir</td>
+</tr>
+<tr>
+<td>images[].default</td>
+<td>Se é a imagem padrão</td>
+<td>Se é padrão, valores aceitos: 0 ou 1</td>
+</tr>
+<tr>
+<td>video</td>
+<td>Vídeo do produto</td>
+<td>Link youtube, máx 200</td>
+</tr>
+<tr>
+<td>description.text</td>
+<td>Descrição em texto simples</td>
+<td>Máx 250</td>
+</tr>
+<tr>
+<td>description.html</td>
+<td>Descrição em html</td>
+<td></td>
+</tr>
+<tr>
+<td>variations[].type</td>
+<td>Tipo de variação</td>
+<td>Valores aceitos: select, radio, text, image</td>
+</tr>
+<tr>
+<td>variations[].name</td>
+<td>Nome da variação</td>
+<td>Máx 50</td>
+</tr>
+<tr>
+<td>variations[].options[].value</td>
+<td>Valor de uma opção de variação</td>
+<td>Regras</td>
+</tr>
+<tr>
+<td>variations[].options[].default</td>
+<td>Se essa opção de variação será a padrão</td>
+<td>Valores aceitos: 0 ou 1</td>
+</tr>
+<tr>
+<td>variations[].options[].file_id</td>
+<td>Id do arquivo enviado na api de uploads para o tipo "image"</td>
+<td>Numérico, Id do upload de arquivo deve existir</td>
+</tr>
+<tr>
+<td>variations[].maxlength</td>
+<td>Máximo de caracteres para tipo "text"</td>
+<td>Numérico</td>
+</tr>
+<tr>
+<td>catalog.title</td>
+<td>Título para o catálogo</td>
+<td>Máx 30</td>
+</tr>
+<tr>
+<td>catalog.collection</td>
+<td>Nome da coleção para o catálogo</td>
+<td>Máx 30</td>
+</tr>
+<tr>
+<td>catalog.description</td>
+<td>Descrição para o catálogo</td>
+<td>Máx 5.000</td>
+</tr>
+<tr>
+<td>catalog.price.default</td>
+<td>Valor padrão para o catálogo</td>
+<td>Numérico</td>
+</tr>
+<tr>
+<td>catalog.price.offer</td>
+<td>Valor de oferta para o catálogo</td>
+<td>Numérico</td>
+</tr>
+<tr>
+<td>catalog.file_id</td>
+<td>Id do arquivo enviado pela api de uploads para o catálogo</td>
+<td>Id do upload de arquivo deve existir</td>
+</tr>
+<tr>
+<td>has_stock</td>
+<td>Se tem pronta entrega</td>
+<td>Valores aceitos: 0 ou 1</td>
+</tr>
+<tr>
+<td>is_featured</td>
+<td>Se é um produto em destaque</td>
+<td>Valores aceitos: 0 ou 1</td>
+</tr>
+<tr>
+<td>is_automated</td>
+<td>Se o produto vai participar da automatização de e-mail marketing</td>
+<td>Valores aceitos: 0 ou 1</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>Se o produto está ativo</td>
+<td>Valores aceitos: 0 ou 1</td>
+</tr>
+</tbody>
+</table>
+<p>Fique atento na hora de enviar as opções das variações já que elas podem ser diferentes dependendo do <code>type</code> escolhido.</p>
+<p>No <code>Body</code> acima tem os 4 tipos de variação como exemplo.</p>
+<p>Como você pode ver no <code>Body</code> do <code>json</code> você pode enviar vários <code>file_id</code>. Esses número deve ser de um <code>id</code> existente que você pode enviar através do <a href="/api-docs/uploads/create/">endpoint de uploads</a>.</p>
+<h2 id="response">Response</h2>
+<p><em>http status code 201</em></p>
+<pre><code class="json">{
+  &quot;data&quot;: {
+    &quot;id&quot;: 11,
+    &quot;code&quot;: &quot;CODE12&quot;,
+    &quot;name&quot;: &quot;Nome do produto&quot;,
+    &quot;average_weight&quot;: 1.85,
+    &quot;price&quot;: {
+      &quot;default&quot;: 1580.95
+    },
+    &quot;category&quot;: {
+      &quot;id&quot;: 1,
+      &quot;client_id&quot;: 1,
+      &quot;parent_id&quot;: null,
+      &quot;_lft&quot;: 1,
+      &quot;_rgt&quot;: 10,
+      &quot;slug&quot;: &quot;notebooks&quot;,
+      &quot;name&quot;: &quot;Notebooks&quot;,
+      &quot;description&quot;: &quot;&quot;,
+      &quot;is_active&quot;: 1,
+      &quot;permission_id&quot;: 90,
+      &quot;created_at&quot;: &quot;2019-09-02 15:18:54&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-02 15:18:54&quot;,
+      &quot;deleted_at&quot;: null
+    },
+    &quot;images&quot;: [
+      {
+        &quot;id&quot;: 17,
+        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-9.jpg&quot;,
+        &quot;default&quot;: 0
+      },
+      {
+        &quot;id&quot;: 18,
+        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-1-7.jpg&quot;,
+        &quot;default&quot;: 1
+      },
+      {
+        &quot;id&quot;: 19,
+        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-2-7.jpg&quot;,
+        &quot;default&quot;: 0
+      }
+    ],
+    &quot;video&quot;: &quot;https://www.youtube.com/watch?v=KG54us1diCw&quot;,
+    &quot;description&quot;: {
+      &quot;text&quot;: &quot;text description&quot;,
+      &quot;html&quot;: &quot;html description&quot;
+    },
+    &quot;variations&quot;: [
+      {
+        &quot;type&quot;: &quot;select&quot;,
+        &quot;slug&quot;: &quot;cor&quot;,
+        &quot;name&quot;: &quot;Cor&quot;,
+        &quot;options&quot;: [&quot;Azul&quot;, &quot;*Amarelo&quot;, &quot;Vermelho&quot;]
+      },
+      {
+        &quot;type&quot;: &quot;radio&quot;,
+        &quot;slug&quot;: &quot;tamanho&quot;,
+        &quot;name&quot;: &quot;Tamanho&quot;,
+        &quot;options&quot;: [&quot;Pequeno&quot;, &quot;Médio&quot;, &quot;Grande&quot;]
+      },
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;slug&quot;: &quot;gravura&quot;,
+        &quot;name&quot;: &quot;Gravura&quot;,
+        &quot;options&quot;: [50]
+      },
+      {
+        &quot;type&quot;: &quot;image&quot;,
+        &quot;slug&quot;: &quot;textura&quot;,
+        &quot;name&quot;: &quot;Textura&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;value&quot;: &quot;Textura 1&quot;,
+            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-47.jpg&quot;
+          },
+          {
+            &quot;value&quot;: &quot;Textura 2&quot;,
+            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-1-34.jpg&quot;
+          },
+          {
+            &quot;value&quot;: &quot;Textura 3&quot;,
+            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-7-34.jpg&quot;
+          }
+        ]
+      }
+    ],
+    &quot;catalog&quot;: {
+      &quot;is_catalog&quot;: 0,
+      &quot;title&quot;: &quot;Teste&quot;,
+      &quot;collection&quot;: &quot;2018&quot;,
+      &quot;description&quot;: &quot;Descrição de teste&quot;,
+      &quot;price&quot;: {
+        &quot;default&quot;: 29.9,
+        &quot;offer&quot;: 19.95
+      },
+      &quot;image&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/catalog/500x500/2019-06-28-164720-4-22.jpg&quot;
+    },
+    &quot;has_stock&quot;: 1,
+    &quot;is_featured&quot;: 0,
+    &quot;is_automated&quot;: 0,
+    &quot;is_active&quot;: 1,
+    &quot;created_at&quot;: &quot;2019-09-13 16:52:09&quot;,
+    &quot;updated_at&quot;: &quot;2019-09-13 16:52:09&quot;,
+    &quot;deleted_at&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+
+<h2 id="errors">Errors</h2>
+<p><strong>Token não enviado</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Token not found.&quot;
+}
+</code></pre>
+
+<p><strong>Token inválido</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Invalid token.&quot;
+}
+</code></pre>
+
+<p><strong>Erros nos dados enviados</strong></p>
+<p><em>Http status code 422</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Unprocessable Entity&quot;,
+  &quot;invalid_fields&quot;: {
+    &quot;field1&quot;: &quot;Error message 1.&quot;,
+    &quot;field1&quot;: &quot;Error message 2.&quot;,
+    &quot;field1&quot;: &quot;Error message 3.&quot;
+  }
+}
+</code></pre>
+
+<p><strong>Erro interno do servidor</strong></p>
+<p><em>Http status code 500</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Internal Server Error&quot;
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
