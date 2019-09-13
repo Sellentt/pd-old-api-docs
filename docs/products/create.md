@@ -121,8 +121,6 @@ POST "https://app.pedidosdigitais.com.br/api/v2/products"
 }
 ```
 
-| XXXX | YYYY | Regras |
-
 | Field                          | Description                                                      | Rules                                          |
 | ------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------- |
 | code                           | Código do produto                                                | Obrigatório, mín 3, máx 30, único              |
