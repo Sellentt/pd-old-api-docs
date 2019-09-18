@@ -33,7 +33,14 @@ nav:
       - "Listar": "products/index.md"
       - "Visualizar": "products/show.md"
       - "Cadastrar": "products/create.md"
+      - "Alterar": "products/update.md"
       - "Remover": "products/delete.md"
+  - Imagem Produtos:
+      - "Listar": "products/images/index.md"
+      - "Visualizar": "products/images/show.md"
+      - "Cadastrar": "products/images/create.md"
+      - "Alterar": "products/images/update.md"
+      - "Remover": "products/images/delete.md"
   - Uploads:
       - "Enviar": "uploads/create.md"
 theme: readthedocs

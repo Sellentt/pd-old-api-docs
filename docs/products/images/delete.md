@@ -1,14 +1,15 @@
-Remove um produto.
+Remove uma imagem de um produto
 
 ## Endpoint
 
 ```
-DELETE "https://app.pedidosdigitais.com.br/api/v2/products/{id}"
+DELETE "https://app.pedidosdigitais.com.br/api/v2/products/{id}/images/{image_id}"
 ```
 
-| Params | Description                     |
-| ------ | ------------------------------- |
-| id     | Id do produto que será removido |
+| Params   | Description   |
+| -------- | ------------- |
+| id       | Id do produto |
+| image_id | Id da imagem  |
 
 ## Headers
 
@@ -46,13 +47,23 @@ _Http status code 401_
 }
 ```
 
-**Produto não encontrado.**
+**Imagem não encontrada**
 
 _Http status code 404_
 
 ```json
 {
-  "error": "Product not found."
+  "error": "Image not found."
+}
+```
+
+**Imagem padrão não pode ser removida**
+
+_Http status code 401_
+
+```json
+{
+  "error": "Default image cannot be deleted."
 }
 ```
 

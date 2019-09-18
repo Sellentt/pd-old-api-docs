@@ -113,11 +113,11 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/products/{id}"
 
 | Field                          | Description                                                                | Rules                                          |
 | ------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------- |
-| \*code                         | Código do produto                                                          | Obrigatório, mín 3, máx 30, único              |
-| \*name                         | Nome do produto                                                            | Obrigatório, mín 2, máx 150                    |
-| \*average_weight               | Peso médio do produto                                                      | Numérico, min 0.01, máx 10000000               |
-| \*price.default                | Valor do produto                                                           | Obrigatório, numérico, máx 10000000            |
-| \*category_id                  | Id da categoria do produto                                                 | Obrigatório, numérico, Id deve existir         |
+| code                           | Código do produto                                                          | Obrigatório, mín 3, máx 30, único              |
+| name                           | Nome do produto                                                            | Obrigatório, mín 2, máx 150                    |
+| average_weight                 | Peso médio do produto                                                      | Numérico, min 0.01, máx 10000000               |
+| price.default                  | Valor do produto                                                           | Obrigatório, numérico, máx 10000000            |
+| category_id                    | Id da categoria do produto                                                 | Obrigatório, numérico, Id deve existir         |
 | video                          | Vídeo do produto                                                           | Link youtube, máx 200                          |
 | description.text               | Descrição em texto simples                                                 | Máx 250                                        |
 | description.html               | Descrição em html                                                          |                                                |

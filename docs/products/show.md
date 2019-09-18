@@ -115,7 +115,7 @@ _Http status code 401_
 }
 ```
 
-**Loja não encontrada**
+**Produto não encontrada**
 
 _Http status code 404_
 
