@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Cadastrar - Api Pedidos Digitais</title>
+  <title>Alterar - Api Pedidos Digitais</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Cadastrar";
-    var mkdocs_page_input_path = "products/create.md";
+    var mkdocs_page_name = "Alterar";
+    var mkdocs_page_input_path = "products/update.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -192,9 +192,13 @@
                     
     <a class="" href="../show/">Visualizar</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../create/">Cadastrar</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Cadastrar</a>
+    <a class="current" href="./">Alterar</a>
     <ul class="subnav">
             
     <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
@@ -206,6 +210,9 @@
     <li class="toctree-l3"><a href="#body">Body</a></li>
     
 
+    <li class="toctree-l3"><a href="#imagens-do-produto">Imagens do produto</a></li>
+    
+
     <li class="toctree-l3"><a href="#response">Response</a></li>
     
 
@@ -213,10 +220,6 @@
     
 
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../update/">Alterar</a>
                 </li>
                 <li class="">
                     
@@ -289,7 +292,7 @@
         
       
     
-    <li>Cadastrar</li>
+    <li>Alterar</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -301,9 +304,23 @@
               
                 <p>Adiciona um novo produto.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>POST &quot;https://app.pedidosdigitais.com.br/api/v2/products&quot;
+<pre><code>PUT &quot;https://app.pedidosdigitais.com.br/api/v2/products/{id}&quot;
 </code></pre>
 
+<table>
+<thead>
+<tr>
+<th>Params</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Id do produto que será alterado</td>
+</tr>
+</tbody>
+</table>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 &quot;Content-Type&quot;: &quot;application/json&quot;
@@ -318,20 +335,6 @@
     &quot;default&quot;: 1580.95
   },
   &quot;category_id&quot;: 1,
-  &quot;images&quot;: [
-    {
-      &quot;file_id&quot;: 1,
-      &quot;default&quot;: 0
-    },
-    {
-      &quot;file_id&quot;: 2,
-      &quot;default&quot;: 1
-    },
-    {
-      &quot;file_id&quot;: 3,
-      &quot;default&quot;: 0
-    }
-  ],
   &quot;video&quot;: &quot;https://www.youtube.com/watch?v=KG54us1diCw&quot;,
   &quot;description&quot;: {
     &quot;text&quot;: &quot;text description&quot;,
@@ -389,11 +392,11 @@
         },
         {
           &quot;value&quot;: &quot;Textura 2&quot;,
-          &quot;file_id&quot;: 2
+          &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/azul.png&quot;
         },
         {
           &quot;value&quot;: &quot;Textura 3&quot;,
-          &quot;file_id&quot;: 8
+          &quot;file_id&quot;: 1
         }
       ]
     }
@@ -406,7 +409,7 @@
       &quot;default&quot;: 29.9,
       &quot;offer&quot;: 19.95
     },
-    &quot;file_id&quot;: 5
+    &quot;file_id&quot;: 1
   },
   &quot;has_stock&quot;: 1,
   &quot;is_featured&quot;: 0,
@@ -450,16 +453,6 @@
 <td>Obrigatório, numérico, Id deve existir</td>
 </tr>
 <tr>
-<td>images[].file_id</td>
-<td>Id do arquivo enviado na api de uploads</td>
-<td>Id do upload de arquivo deve existir</td>
-</tr>
-<tr>
-<td>images[].default</td>
-<td>Se é a imagem padrão</td>
-<td>Se é padrão, valores aceitos: 0 ou 1</td>
-</tr>
-<tr>
 <td>video</td>
 <td>Vídeo do produto</td>
 <td>Link youtube, máx 200</td>
@@ -498,6 +491,11 @@
 <td>variations[].options[].file_id</td>
 <td>Id do arquivo enviado na api de uploads para o tipo "image"</td>
 <td>Numérico, Id do upload de arquivo deve existir</td>
+</tr>
+<tr>
+<td>variations[].options[].path</td>
+<td>Caso não queira mudar a foto dessa opção de variação envie o mesmo caminho</td>
+<td>Obrigatório caso não envie um novo <code>file_id</code></td>
 </tr>
 <tr>
 <td>variations[].maxlength</td>
@@ -559,12 +557,14 @@
 <p>Fique atento na hora de enviar as opções das variações já que elas podem ser diferentes dependendo do <code>type</code> escolhido.</p>
 <p>No <code>Body</code> acima tem os 4 tipos de variação como exemplo.</p>
 <p>Como você pode ver no <code>Body</code> do <code>json</code> você pode enviar vários <code>file_id</code>. Esses número deve ser de um <code>id</code> existente que você pode enviar através do <a href="/api-docs/uploads/create/">endpoint de uploads</a>.</p>
+<h2 id="imagens-do-produto">Imagens do produto</h2>
+<p>As imagens do produto são gerenciadas a partir de um conjunto de <a href="#link">endpoints específicos para gerenciamento de imagens</a>.</p>
 <h2 id="response">Response</h2>
 <p><em>http status code 201</em></p>
 <pre><code class="json">{
   &quot;data&quot;: {
-    &quot;id&quot;: 11,
-    &quot;code&quot;: &quot;CODE12&quot;,
+    &quot;id&quot;: 13,
+    &quot;code&quot;: &quot;CODE512&quot;,
     &quot;name&quot;: &quot;Nome do produto&quot;,
     &quot;average_weight&quot;: 1.85,
     &quot;price&quot;: {
@@ -576,19 +576,14 @@
     },
     &quot;images&quot;: [
       {
-        &quot;id&quot;: 17,
-        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-9.jpg&quot;,
+        &quot;id&quot;: 36,
+        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720.jpg&quot;,
         &quot;default&quot;: 0
       },
       {
-        &quot;id&quot;: 18,
-        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-1-7.jpg&quot;,
+        &quot;id&quot;: 38,
+        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-4.jpg&quot;,
         &quot;default&quot;: 1
-      },
-      {
-        &quot;id&quot;: 19,
-        &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/products/500x500/2019-06-28-164720-2-7.jpg&quot;,
-        &quot;default&quot;: 0
       }
     ],
     &quot;video&quot;: &quot;https://www.youtube.com/watch?v=KG54us1diCw&quot;,
@@ -622,21 +617,21 @@
         &quot;options&quot;: [
           {
             &quot;value&quot;: &quot;Textura 1&quot;,
-            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-47.jpg&quot;
+            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-180.jpg&quot;
           },
           {
             &quot;value&quot;: &quot;Textura 2&quot;,
-            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-1-34.jpg&quot;
+            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-181.jpg&quot;
           },
           {
             &quot;value&quot;: &quot;Textura 3&quot;,
-            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-7-34.jpg&quot;
+            &quot;path&quot;: &quot;/storage/uploads/1/products/variations/300x300/2019-06-28-164720-182.jpg&quot;
           }
         ]
       }
     ],
     &quot;catalog&quot;: {
-      &quot;is_catalog&quot;: 0,
+      &quot;is_catalog&quot;: 1,
       &quot;title&quot;: &quot;Teste&quot;,
       &quot;collection&quot;: &quot;2018&quot;,
       &quot;description&quot;: &quot;Descrição de teste&quot;,
@@ -644,14 +639,14 @@
         &quot;default&quot;: 29.9,
         &quot;offer&quot;: 19.95
       },
-      &quot;image&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/catalog/500x500/2019-06-28-164720-4-22.jpg&quot;
+      &quot;image&quot;: &quot;https://app.pedidosdigitais.com.br/storage/uploads/1/catalog/500x500/2019-06-28-164720-29.jpg&quot;
     },
     &quot;has_stock&quot;: 1,
     &quot;is_featured&quot;: 0,
     &quot;is_automated&quot;: 0,
     &quot;is_active&quot;: 1,
-    &quot;created_at&quot;: &quot;2019-09-13 16:52:09&quot;,
-    &quot;updated_at&quot;: &quot;2019-09-13 16:52:09&quot;,
+    &quot;created_at&quot;: &quot;2019-09-17 14:36:13&quot;,
+    &quot;updated_at&quot;: &quot;2019-09-18 14:54:01&quot;,
     &quot;deleted_at&quot;: &quot;&quot;
   }
 }
@@ -697,10 +692,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../update/" class="btn btn-neutral float-right" title="Alterar">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../delete/" class="btn btn-neutral float-right" title="Remover">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../show/" class="btn btn-neutral" title="Visualizar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create/" class="btn btn-neutral" title="Cadastrar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -726,10 +721,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../show/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../create/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../update/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../delete/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
