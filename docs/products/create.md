@@ -172,18 +172,7 @@ _http status code 201_
     },
     "category": {
       "id": 1,
-      "client_id": 1,
-      "parent_id": null,
-      "_lft": 1,
-      "_rgt": 10,
-      "slug": "notebooks",
-      "name": "Notebooks",
-      "description": "",
-      "is_active": 1,
-      "permission_id": 90,
-      "created_at": "2019-09-02 15:18:54",
-      "updated_at": "2019-09-02 15:18:54",
-      "deleted_at": null
+      "name": "Notebooks"
     },
     "images": [
       {
