@@ -90,9 +90,9 @@ _Http status code 422_
 {
   "error": "Unprocessable Entity",
   "invalid_fields": {
-    "parent_id": "The selected parent id is invalid.",
-    "name": "The name field is required.",
-    "is_active": "The is active field is required."
+    "field1": "Error message 1.",
+    "field1": "Error message 2.",
+    "field1": "Error message 3."
   }
 }
 ```

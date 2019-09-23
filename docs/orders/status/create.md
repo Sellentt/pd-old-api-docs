@@ -76,9 +76,9 @@ _Http status code 422_
 {
   "error": "Unprocessable Entity",
   "invalid_fields": {
-    "name": "The name field is required.",
-    "code": "The code field is required.",
-    "group_id": "The group id field is required."
+    "field1": "Error message 1.",
+    "field1": "Error message 2.",
+    "field1": "Error message 3."
   }
 }
 ```
