@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Visualizar - Api Pedidos Digitais</title>
+  <title>Listar - Api Pedidos Digitais</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Visualizar";
-    var mkdocs_page_input_path = "stores/show.md";
+    var mkdocs_page_name = "Listar";
+    var mkdocs_page_input_path = "orders/status/index.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -132,38 +132,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../">Listar</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Visualizar</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
-    
-
-    <li class="toctree-l3"><a href="#headers">Headers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#response">Response</a></li>
-    
-
-    <li class="toctree-l3"><a href="#errors">Errors</a></li>
-    
-
-    </ul>
+    <a class="" href="../../stores/">Listar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../create/">Cadastrar</a>
+    <a class="" href="../../stores/show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../update/">Alterar</a>
+    <a class="" href="../../stores/create/">Cadastrar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../delete/">Remover</a>
+    <a class="" href="../../stores/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/delete/">Remover</a>
                 </li>
     </ul>
 	    </li>
@@ -280,25 +265,40 @@
 		
     <span class="caption-text">Status dos pedidos</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../orders/status/">Listar</a>
+    <a class="current" href="./">Listar</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
+    
+
+    <li class="toctree-l3"><a href="#headers">Headers</a></li>
+    
+
+    <li class="toctree-l3"><a href="#response">Response</a></li>
+    
+
+    <li class="toctree-l3"><a href="#errors">Errors</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../orders/status/show/">Visualizar</a>
+    <a class="" href="show/">Visualizar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../orders/status/create/">Cadastrar</a>
+    <a class="" href="create/">Cadastrar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../orders/status/update/">Alterar</a>
+    <a class="" href="update/">Alterar</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../orders/status/delete/">Remover</a>
+    <a class="" href="delete/">Remover</a>
                 </li>
     </ul>
 	    </li>
@@ -336,11 +336,11 @@
     
       
         
-          <li>Lojas &raquo;</li>
+          <li>Status dos pedidos &raquo;</li>
         
       
     
-    <li>Visualizar</li>
+    <li>Listar</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -350,25 +350,11 @@
           <div role="main">
             <div class="section">
               
-                <p>Detalhes de uma loja.</p>
+                <p>Listar os status dos pedidos.</p>
 <h2 id="endpoint">Endpoint</h2>
-<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/stores/{id}&quot;
+<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/orders/status&quot;
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th>Params</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>Id da loja</td>
-</tr>
-</tbody>
-</table>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 </code></pre>
@@ -376,47 +362,24 @@
 <h2 id="response">Response</h2>
 <p><em>http status code 200</em></p>
 <pre><code class="json">{
-  &quot;data&quot;: {
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Apple Store NYC&quot;,
-    &quot;company_name&quot;: &quot;&quot;,
-    &quot;doc_type&quot;: &quot;cpf&quot;,
-    &quot;doc_number&quot;: &quot;000.000.000-00&quot;,
-    &quot;reg_number&quot;: &quot;&quot;,
-    &quot;address_street&quot;: &quot;&quot;,
-    &quot;address_number&quot;: &quot;&quot;,
-    &quot;address_more&quot;: &quot;&quot;,
-    &quot;address_zipcode&quot;: &quot;&quot;,
-    &quot;address_district&quot;: &quot;&quot;,
-    &quot;address_city&quot;: &quot;&quot;,
-    &quot;address_state&quot;: &quot;&quot;,
-    &quot;address_street_delivery&quot;: &quot;&quot;,
-    &quot;address_number_delivery&quot;: &quot;&quot;,
-    &quot;address_more_delivery&quot;: &quot;&quot;,
-    &quot;address_zipcode_delivery&quot;: &quot;&quot;,
-    &quot;address_district_delivery&quot;: &quot;&quot;,
-    &quot;address_city_delivery&quot;: &quot;&quot;,
-    &quot;address_state_delivery&quot;: &quot;&quot;,
-    &quot;phone_number_1&quot;: &quot;&quot;,
-    &quot;phone_number_2&quot;: &quot;&quot;,
-    &quot;mobile_number_1&quot;: &quot;&quot;,
-    &quot;mobile_number_2&quot;: &quot;&quot;,
-    &quot;email_1&quot;: &quot;&quot;,
-    &quot;email_2&quot;: &quot;&quot;,
-    &quot;created_at&quot;: &quot;2019-08-26 08:36:57&quot;,
-    &quot;updated_at&quot;: &quot;2019-08-26 10:37:58&quot;,
-    &quot;company&quot;: {
+  &quot;data&quot;: [
+    {
       &quot;id&quot;: 1,
-      &quot;code&quot;: &quot;1020&quot;,
-      &quot;name&quot;: &quot;Apple Inc.&quot;
+      &quot;name&quot;: &quot;Recebido&quot;,
+      &quot;color&quot;: &quot;#808080&quot;,
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-06 11:10:50&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-23 15:53:28&quot;
     },
-    &quot;agents&quot;: [
-      {
-        &quot;id&quot;: 12 ,
-        &quot;name&quot;: &quot;John Due&quot;
-      }
-    ]
-  }
+    {
+      &quot;id&quot;: 3,
+      &quot;name&quot;: &quot;Aguardando Pagto.&quot;,
+      &quot;color&quot;: &quot;#EEEEEE&quot;,
+      &quot;is_active&quot;: 1,
+      &quot;created_at&quot;: &quot;2019-09-23 16:12:53&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-23 16:12:53&quot;
+    }
+  ]
 }
 </code></pre>
 
@@ -435,13 +398,6 @@
 }
 </code></pre>
 
-<p><strong>Loja não encontrada</strong></p>
-<p><em>Http status code 404</em></p>
-<pre><code class="json">{
-  &quot;error&quot;: &quot;Store not found.&quot;
-}
-</code></pre>
-
 <p><strong>Erro interno do servidor</strong></p>
 <p><em>Http status code 500</em></p>
 <pre><code class="json">{
@@ -455,10 +411,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../create/" class="btn btn-neutral float-right" title="Cadastrar">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="show/" class="btn btn-neutral float-right" title="Visualizar">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../" class="btn btn-neutral" title="Listar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../products/variations/delete/" class="btn btn-neutral" title="Remover"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -484,10 +440,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../products/variations/delete/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../create/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="show/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
