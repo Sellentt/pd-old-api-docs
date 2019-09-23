@@ -1,14 +1,15 @@
-Adiciona uma nova variação precificada no produto.
+Altera uma variação precificada de um produto.
 
 ## Endpoint
 
 ```
-POST "https://app.pedidosdigitais.com.br/api/v2/products/{id}/variations"
+PUT "https://app.pedidosdigitais.com.br/api/v2/products/{id}/variations/{variation_id}"
 ```
 
-| Params | Description   |
-| ------ | ------------- |
-| id     | Id do produto |
+| Params       | Description                |
+| ------------ | -------------------------- |
+| id           | Id do produto              |
+| variation_id | Id da variação precificada |
 
 ## Headers
 
@@ -42,13 +43,13 @@ _http status code 201_
 ```json
 {
   "data": {
+    "id": 8,
     "name": "SSD 512 GB",
     "price_change_type": "increase",
     "price_change_amount": 1.5,
     "price_change_option": "amount",
     "updated_at": "2019-09-19 17:28:20",
-    "created_at": "2019-09-19 17:28:20",
-    "id": 8
+    "created_at": "2019-09-19 17:28:20"
   }
 }
 ```
@@ -90,13 +91,13 @@ _Http status code 422_
 }
 ```
 
-**Produto não encontrado**
+**Variação não encontrado**
 
 _Http status code 404_
 
 ```json
 {
-  "error": "Product not found."
+  "error": "Variation not found."
 }
 ```
 

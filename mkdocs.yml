@@ -45,6 +45,8 @@ nav:
       - "Listar": "products/variations/index.md"
       - "Visualizar": "products/variations/show.md"
       - "Cadastrar": "products/variations/create.md"
+      - "Alterar": "products/variations/update.md"
+      - "Remover": "products/variations/delete.md"
   - Uploads:
       - "Enviar": "uploads/create.md"
 theme: readthedocs
