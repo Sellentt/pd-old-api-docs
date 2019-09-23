@@ -32,7 +32,7 @@ _Http status code 401_
 
 ```json
 {
-  "error": "Token not found."nova categoria.
+  "error": "Token not found."
 }
 ```
 

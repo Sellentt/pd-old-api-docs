@@ -1,4 +1,4 @@
-Lista os status dos pedidos.
+Listar os status dos pedidos.
 
 ## Endpoint
 
