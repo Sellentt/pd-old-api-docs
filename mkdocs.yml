@@ -47,6 +47,12 @@ nav:
       - "Cadastrar": "products/variations/create.md"
       - "Alterar": "products/variations/update.md"
       - "Remover": "products/variations/delete.md"
+  - Status dos pedidos:
+      - "Listar": "orders/status/index.md"
+      - "Visualizar": "orders/status/show.md"
+      - "Cadastrar": "orders/status/create.md"
+      - "Alterar": "orders/status/update.md"
+      - "Remover": "orders/status/delete.md"
   - Uploads:
       - "Enviar": "uploads/create.md"
 theme: readthedocs
