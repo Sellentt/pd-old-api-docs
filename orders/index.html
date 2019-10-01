@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Listar - Api Pedidos Digitais</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Listar";
+    var mkdocs_page_input_path = "orders/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Api Pedidos Digitais</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Grupos de usuários</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../groups/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../groups/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../groups/permissions/">Permissões</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Usuários</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../users/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../users/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../users/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../users/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../users/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Clientes</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../companies/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../companies/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../companies/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../companies/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../companies/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lojas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../stores/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stores/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stores/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stores/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stores/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Categorias</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../categories/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../categories/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../categories/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../categories/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../categories/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Produtos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../products/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Imagem Produtos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../products/images/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/images/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/images/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/images/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/images/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Variações precificadas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../products/variations/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/variations/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/variations/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/variations/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../products/variations/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Status dos pedidos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="status/">Listar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="status/show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="status/create/">Cadastrar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="status/update/">Alterar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="status/delete/">Remover</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pedidos</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Listar</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
+    
+
+    <li class="toctree-l3"><a href="#params">Params</a></li>
+    
+
+    <li class="toctree-l3"><a href="#headers">Headers</a></li>
+    
+
+    <li class="toctree-l3"><a href="#response">Response</a></li>
+    
+
+    <li class="toctree-l3"><a href="#errors">Errors</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="show/">Visualizar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="update/">Alterar</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Uploads</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../uploads/create/">Enviar</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Api Pedidos Digitais</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pedidos &raquo;</li>
+        
+      
+    
+    <li>Listar</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Listar os pedidos por padrão em ordem decrescente.</p>
+<h2 id="endpoint">Endpoint</h2>
+<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/orders&quot;
+</code></pre>
+
+<h2 id="params">Params</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order</td>
+<td>Campo para ordenação dos pedidos. Por data de criação (created) ou por data de atualização (updated)</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>Tipo de ordenação dos pedidos de acordo com a coluna passada acima (Pode ser <code>asc</code> e <code>desc</code>)</td>
+</tr>
+<tr>
+<td>after</td>
+<td>Data no padrão YYYY-MM-DDTHH:MM:SS. Exemplo: 2019-09-27T08:29:00. Busca pedidos alterados dessa data/hora em diante.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="headers">Headers</h2>
+<pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
+</code></pre>
+
+<h2 id="response">Response</h2>
+<p><em>http status code 200</em></p>
+<pre><code class="json">{
+  &quot;data&quot;: [
+    {
+      &quot;code&quot;: 2,
+      &quot;doc_type&quot;: &quot;cpf&quot;,
+      &quot;doc_number&quot;: &quot;72585412369&quot;,
+      &quot;reg_number&quot;: &quot;322222222&quot;,
+      &quot;amount&quot;: &quot;1580.95&quot;,
+      &quot;tracking_code&quot;: &quot;BR521452147&quot;,
+      &quot;buyer_id&quot;: 48,
+      &quot;buyer_name&quot;: &quot;Rodrigo / Nome do lojista 123&quot;,
+      &quot;buyer_email&quot;: &quot;func_a2@livepixel.com.br&quot;,
+      &quot;buyer_phone_number&quot;: &quot;55555555555&quot;,
+      &quot;buyer_mobile_number&quot;: &quot;55555555555&quot;,
+      &quot;address_street&quot;: &quot;Avenida&quot;,
+      &quot;address_number&quot;: &quot;11&quot;,
+      &quot;address_more&quot;: &quot;10-12&quot;,
+      &quot;address_zipcode&quot;: &quot;14000-123&quot;,
+      &quot;address_district&quot;: &quot;Centro&quot;,
+      &quot;address_city&quot;: &quot;Ribeirão Preto&quot;,
+      &quot;address_state&quot;: &quot;SP&quot;,
+      &quot;address_street_delivery&quot;: &quot;Avenida&quot;,
+      &quot;address_number_delivery&quot;: &quot;11&quot;,
+      &quot;address_more_delivery&quot;: &quot;10-12&quot;,
+      &quot;address_zipcode_delivery&quot;: &quot;14000-123&quot;,
+      &quot;address_district_delivery&quot;: &quot;Centro&quot;,
+      &quot;address_city_delivery&quot;: &quot;Ribeirão Preto&quot;,
+      &quot;address_state_delivery&quot;: &quot;SP&quot;,
+      &quot;phone_number&quot;: &quot;6434112386&quot;,
+      &quot;mobile_number&quot;: &quot;&quot;,
+      &quot;obs&quot;: &quot;Por favor confirmar se tem todos os produtos&quot;,
+      &quot;payment_method_id&quot;: 1,
+      &quot;payment_method_rules&quot;: {
+        &quot;id&quot;: 1,
+        &quot;client_id&quot;: 1,
+        &quot;group_id&quot;: null,
+        &quot;name&quot;: &quot;Pagamento Padrão&quot;,
+        &quot;description&quot;: &quot;Forma de pagamento padrão para os pedidos em geral.&quot;,
+        &quot;type_diff_price&quot;: &quot;none&quot;,
+        &quot;diff_price_percent&quot;: null,
+        &quot;is_default&quot;: 1,
+        &quot;is_active&quot;: true,
+        &quot;created_at&quot;: &quot;2019-09-30 15:53:35&quot;,
+        &quot;updated_at&quot;: &quot;2019-09-30 15:53:35&quot;,
+        &quot;deleted_at&quot;: null
+      },
+      &quot;payment_diff_price&quot;: &quot;0.00&quot;,
+      &quot;created_at&quot;: &quot;2019-09-30 15:54:39&quot;,
+      &quot;updated_at&quot;: &quot;2019-10-01 14:22:48&quot;,
+      &quot;deleted_at&quot;: null,
+      &quot;status&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Aguardando Pagto.&quot;,
+        &quot;color&quot;: &quot;#087835&quot;
+      },
+      &quot;company&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot; BETÂNIA KELLY MARTINS PEREIRA&quot;
+      },
+      &quot;products&quot;: [
+        {
+          &quot;code&quot;: &quot;1234&quot;,
+          &quot;name&quot;: &quot;Nome do produto&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Amarelo&quot;
+            },
+            {
+              &quot;name&quot;: &quot;Tamanho&quot;,
+              &quot;value&quot;: &quot;Pequeno&quot;
+            },
+            {
+              &quot;name&quot;: &quot;Gravura&quot;,
+              &quot;value&quot;: &quot;teste&quot;
+            },
+            {
+              &quot;name&quot;: &quot;Textura&quot;,
+              &quot;value&quot;: &quot;Textura 3&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;1580.95&quot;,
+          &quot;notes&quot;: &quot;&quot;
+        }
+      ],
+      &quot;transport_company&quot;: {
+        &quot;id&quot;: 2,
+        &quot;code&quot;: &quot;5225&quot;,
+        &quot;name&quot;: &quot;Jadlog&quot;
+      }
+    },
+    {
+      &quot;code&quot;: 1,
+      &quot;doc_type&quot;: &quot;cpf&quot;,
+      &quot;doc_number&quot;: &quot;&quot;,
+      &quot;reg_number&quot;: &quot;&quot;,
+      &quot;amount&quot;: &quot;2395.20&quot;,
+      &quot;tracking_code&quot;: null,
+      &quot;buyer_id&quot;: 48,
+      &quot;buyer_name&quot;: &quot;Rodrigo / Nome do lojista 123&quot;,
+      &quot;buyer_email&quot;: &quot;func_a2@livepixel.com.br&quot;,
+      &quot;buyer_phone_number&quot;: &quot;55555555555&quot;,
+      &quot;buyer_mobile_number&quot;: &quot;55555555555&quot;,
+      &quot;address_street&quot;: &quot;Avenida Xpto&quot;,
+      &quot;address_number&quot;: &quot;400&quot;,
+      &quot;address_more&quot;: &quot;17-500&quot;,
+      &quot;address_zipcode&quot;: &quot;14000-180&quot;,
+      &quot;address_district&quot;: &quot;Ribeirânia&quot;,
+      &quot;address_city&quot;: &quot;Ribeirão Preto&quot;,
+      &quot;address_state&quot;: &quot;SP&quot;,
+      &quot;address_street_delivery&quot;: &quot;Avenida Xpto&quot;,
+      &quot;address_number_delivery&quot;: &quot;3905&quot;,
+      &quot;address_more_delivery&quot;: &quot;17-500&quot;,
+      &quot;address_zipcode_delivery&quot;: &quot;14000-180&quot;,
+      &quot;address_district_delivery&quot;: &quot;Ribeirânia&quot;,
+      &quot;address_city_delivery&quot;: &quot;Ribeirão Preto&quot;,
+      &quot;address_state_delivery&quot;: &quot;SP&quot;,
+      &quot;phone_number&quot;: &quot;&quot;,
+      &quot;mobile_number&quot;: &quot;&quot;,
+      &quot;obs&quot;: &quot;&quot;,
+      &quot;payment_method_id&quot;: null,
+      &quot;payment_method_rules&quot;: null,
+      &quot;payment_diff_price&quot;: &quot;0.00&quot;,
+      &quot;created_at&quot;: &quot;2019-09-27 08:29:02&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-27 08:29:02&quot;,
+      &quot;deleted_at&quot;: null,
+      &quot;status&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Aguardando Pagto.&quot;,
+        &quot;color&quot;: &quot;#087835&quot;
+      },
+      &quot;company&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot; BETÂNIA KELLY MARTINS PEREIRA&quot;
+      },
+      &quot;products&quot;: [
+        {
+          &quot;code&quot;: &quot;CODE6&quot;,
+          &quot;name&quot;: &quot;Produto CODE 6&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;a&quot;,
+              &quot;value&quot;: &quot;Amarelo&quot;
+            },
+            {
+              &quot;name&quot;: &quot;b&quot;,
+              &quot;value&quot;: &quot;Eclipse&quot;
+            },
+            {
+              &quot;name&quot;: &quot;c&quot;,
+              &quot;value&quot;: &quot;te&quot;
+            },
+            {
+              &quot;name&quot;: &quot;d&quot;,
+              &quot;value&quot;: &quot;x&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;521.45&quot;,
+          &quot;notes&quot;: &quot;&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Azul&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Vermelho&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Verde&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Azul&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;a&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Azul&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;b&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Azul&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;c&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Azul&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;d&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Vermelho&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;a&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Vermelho&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;b&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Vermelho&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;c&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Vermelho&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;d&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Verde&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;a&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Verde&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;b&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Verde&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;c&quot;
+        },
+        {
+          &quot;code&quot;: &quot;1021&quot;,
+          &quot;name&quot;: &quot;Produto Simples&quot;,
+          &quot;variations&quot;: [
+            {
+              &quot;name&quot;: &quot;Cor&quot;,
+              &quot;value&quot;: &quot;Verde&quot;
+            }
+          ],
+          &quot;quantity&quot;: 1,
+          &quot;unit_price&quot;: &quot;19.52&quot;,
+          &quot;notes&quot;: &quot;d&quot;
+        }
+      ],
+      &quot;transport_company&quot;: null
+    }
+  ],
+  &quot;links&quot;: {
+    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/orders?page=1&quot;,
+    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/orders?page=1&quot;,
+    &quot;prev&quot;: null,
+    &quot;next&quot;: null
+  },
+  &quot;meta&quot;: {
+    &quot;current_page&quot;: 1,
+    &quot;from&quot;: 1,
+    &quot;last_page&quot;: 1,
+    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/orders&quot;,
+    &quot;per_page&quot;: 20,
+    &quot;to&quot;: 2,
+    &quot;total&quot;: 2
+  }
+}
+</code></pre>
+
+<h2 id="errors">Errors</h2>
+<p><strong>Token não enviado</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Token not found.&quot;
+}
+</code></pre>
+
+<p><strong>Token inválido</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Invalid token.&quot;
+}
+</code></pre>
+
+<p><strong>Erro interno do servidor</strong></p>
+<p><em>Http status code 500</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Internal Server Error&quot;
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="show/" class="btn btn-neutral float-right" title="Visualizar">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="status/delete/" class="btn btn-neutral" title="Remover"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="status/delete/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="show/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
