@@ -1,4 +1,4 @@
-Altera uma nova categoria.
+Altera um status de pedido.
 
 ## Endpoint
 
