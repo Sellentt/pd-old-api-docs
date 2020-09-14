@@ -41,6 +41,17 @@ nav:
       - "Cadastrar": "products/images/create.md"
       - "Alterar": "products/images/update.md"
       - "Remover": "products/images/delete.md"
+  - Campos Personalizados:
+      - "Listar": "custom_fields/index.md"
+      - "Visualizar": "custom_fields/show.md"
+      - "Cadastrar": "custom_fields/create.md"
+      - "Alterar": "custom_fields/update.md"
+      - "Remover": "custom_fields/delete.md"
+  - Valores dos Campos Personalizados:
+      - "Listar": "custom_values/index.md"
+      - "Cadastrar": "custom_values/create.md"
+      - "Alterar": "custom_values/update.md"
+      - "Remover": "custom_values/delete.md"
   - Variações precificadas:
       - "Listar": "products/variations/index.md"
       - "Visualizar": "products/variations/show.md"

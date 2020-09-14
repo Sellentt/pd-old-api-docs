@@ -27,6 +27,7 @@ _http status code 200_
     "code": "MOTOG",
     "name": "Moto G Novo Produto",
     "average_weight": "12.50",
+    "stock": 500.00,
     "price": {
       "default": "1980.91"
     },

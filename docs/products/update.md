@@ -24,6 +24,7 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/products/{id}"
   "code": "CODE",
   "name": "Nome do produto",
   "average_weight": 1.85,
+  "stock": 500.00,
   "price": {
     "default": 1580.95
   },
@@ -116,6 +117,7 @@ PUT "https://app.pedidosdigitais.com.br/api/v2/products/{id}"
 | code                           | Código do produto                                                          | Obrigatório, mín 3, máx 30, único              |
 | name                           | Nome do produto                                                            | Obrigatório, mín 2, máx 150                    |
 | average_weight                 | Peso médio do produto                                                      | Numérico, min 0.01, máx 10000000               |
+| stock                          | Estoque disponível do produto                                              | Numérico, min 0.01
 | price.default                  | Valor do produto                                                           | Obrigatório, numérico, máx 10000000            |
 | category_id                    | Id da categoria do produto                                                 | Obrigatório, numérico, Id deve existir         |
 | video                          | Vídeo do produto                                                           | Link youtube, máx 200                          |
@@ -160,6 +162,7 @@ _http status code 201_
     "code": "CODE512",
     "name": "Nome do produto",
     "average_weight": 1.85,
+    "stock": 500.00,
     "price": {
       "default": 1580.95
     },

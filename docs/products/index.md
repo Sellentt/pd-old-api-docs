@@ -47,6 +47,7 @@ _http status code 200_
       "code": "1005",
       "name": "Produto de teste completamento preenchido",
       "average_weight": "12.55",
+      "stock": 500.00,
       "price": {
         "default": "1850.79"
       },
