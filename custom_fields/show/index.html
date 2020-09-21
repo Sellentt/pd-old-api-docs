@@ -282,34 +282,6 @@
         &quot;created_at&quot;: &quot;2020-09-09 15:54:44&quot;,
         &quot;updated_at&quot;: &quot;2020-09-09 16:19:27&quot;,
         &quot;deleted_at&quot;: &quot;&quot;
-    },
-    &quot;_debugbar&quot;: {
-        &quot;querys&quot;: {
-            &quot;nb_statements&quot;: 1,
-            &quot;nb_failed_statements&quot;: 0,
-            &quot;accumulated_duration&quot;: 0.04375,
-            &quot;accumulated_duration_str&quot;: &quot;43.75ms&quot;,
-            &quot;statements&quot;: [
-                {
-                    &quot;sql&quot;: &quot;select * from `product_custom_fields` where `id` = '8' and `client_id` = 1 and `product_custom_fields`.`deleted_at` is null limit 1&quot;,
-                    &quot;type&quot;: &quot;query&quot;,
-                    &quot;params&quot;: [],
-                    &quot;bindings&quot;: [
-                        &quot;8&quot;,
-                        &quot;1&quot;
-                    ],
-                    &quot;hints&quot;: [
-                        &quot;Use &lt;code&gt;SELECT *&lt;/code&gt; only if you need all columns from table&quot;,
-                        &quot;&lt;code&gt;LIMIT&lt;/code&gt; without &lt;code&gt;ORDER BY&lt;/code&gt; causes non-deterministic results, depending on the query execution plan&quot;
-                    ],
-                    &quot;backtrace&quot;: [],
-                    &quot;duration&quot;: 0.04375,
-                    &quot;duration_str&quot;: &quot;43.75ms&quot;,
-                    &quot;stmt_id&quot;: &quot;&quot;,
-                    &quot;connection&quot;: &quot;pedidos_digitais&quot;
-                }
-            ]
-        }
     }
 }
 </code></pre>
@@ -332,7 +304,7 @@
 <p><strong>Campo não encontrado</strong></p>
 <p><em>Http status code 404</em></p>
 <pre><code class="json">{
-  &quot;error&quot;: &quot;Product not found.&quot;
+  &quot;error&quot;: &quot;Custom Field not found.&quot;
 }
 </code></pre>
 

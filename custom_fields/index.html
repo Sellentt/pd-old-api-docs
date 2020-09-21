@@ -245,37 +245,6 @@
 <pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/custom_fields&quot;
 </code></pre>
 
-<h1 id="query-strings-filters">Query strings (Filters)</h1>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>after</td>
-<td>date (YYYY-MM-DDTHH:MM:SS)</td>
-<td>Dos produtos alterados desta data em diante (ex: 2019-09-05T12:00:00)</td>
-</tr>
-<tr>
-<td>page</td>
-<td>integer</td>
-<td>Paginação dos produtos</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Observações</strong></p>
-<p>Quando é enviado o parâmetro <code>after</code> o sistema irá retornar todos os produtos que foram alterados desta data em diante, inclusive os produtos que foram <em>"removidos"</em>.</p>
-<p>Você pode identificar que um produto foi removido caso exista na chave <code>deleted_at</code> um valor preenchido. Esse valor é a data/hora que o produto foi removido.</p>
-<p>Veja abaixo um exemplo usando os dois parâmetros:</p>
-<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/products?page=1&amp;after=2019-09-10&quot;
-</code></pre>
-
-<p>Na requisição acima, o sistema irá retornar a primeira página (20 registros por página) dos produtos que foram alterados ou removidos do dia 10/09/2019 em diante.</p>
-<p>Passar o parâmetro <code>after</code> é uma ótima forma de criar uma rotina que irá atualizar seu sistema de tempos em tempos caso o cliente tenha feito alguma alteração de produto direto no painel do Pedidos Digitais.</p>
 <h2 id="headers">Headers</h2>
 <pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
 </code></pre>
@@ -302,8 +271,8 @@
 }
   ],
   &quot;links&quot;: {
-    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/products?page=1&quot;,
-    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/products?page=1&quot;,
+    &quot;first&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/custom_fields?page=1&quot;,
+    &quot;last&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/custom_fields?page=1&quot;,
     &quot;prev&quot;: null,
     &quot;next&quot;: null
   },
@@ -311,7 +280,7 @@
     &quot;current_page&quot;: 1,
     &quot;from&quot;: 1,
     &quot;last_page&quot;: 1,
-    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/products&quot;,
+    &quot;path&quot;: &quot;https://app.pedidosdigitais.com.br/api/v2/custom_fields&quot;,
     &quot;per_page&quot;: 20,
     &quot;to&quot;: 3,
     &quot;total&quot;: 3
