@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Visualizar - Api Pedidos Digitais</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Visualizar";
+    var mkdocs_page_input_path = "custom_fields\\show.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Api Pedidos Digitais</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Grupos de usuários</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../groups/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../groups/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../groups/permissions/">Permissões</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Usuários</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Clientes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../companies/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../companies/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../companies/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../companies/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../companies/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Lojas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Categorias</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Produtos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Imagem Produtos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Campos Personalizados</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Listar</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Visualizar</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Valores dos Campos Personalizados</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Variações precificadas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Status dos pedidos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Pedidos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/update/">Alterar</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Uploads</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../uploads/create/">Enviar</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Api Pedidos Digitais</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Campos Personalizados &raquo;</li>
+        
+      
+    
+    <li>Visualizar</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Detalhes de um campo personalizado.</p>
+<h2 id="endpoint">Endpoint</h2>
+<pre><code>GET &quot;https://app.pedidosdigitais.com.br/api/v2/custom_fields/{id}&quot;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Params</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Id do campo personalizado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="headers">Headers</h2>
+<pre><code>&quot;Authorization&quot;: &quot;Bearer TOKEN&quot;
+</code></pre>
+
+<h2 id="response">Response</h2>
+<p><em>http status code 200</em></p>
+<pre><code class="json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 8,
+        &quot;custom_field_type&quot;: &quot;technical_sheet&quot;,
+        &quot;name&quot;: &quot;Quantidade de Memória RAM&quot;,
+        &quot;type&quot;: &quot;select&quot;,
+        &quot;options&quot;: [
+            &quot;10&quot;,
+            &quot;15&quot;,
+            &quot;20&quot;
+        ],
+        &quot;maxlength&quot;: null,
+        &quot;is_active&quot;: 1,
+        &quot;is_mandatory&quot;: 1,
+        &quot;created_at&quot;: &quot;2020-09-09 15:54:44&quot;,
+        &quot;updated_at&quot;: &quot;2020-09-09 16:19:27&quot;,
+        &quot;deleted_at&quot;: &quot;&quot;
+    },
+    &quot;_debugbar&quot;: {
+        &quot;querys&quot;: {
+            &quot;nb_statements&quot;: 1,
+            &quot;nb_failed_statements&quot;: 0,
+            &quot;accumulated_duration&quot;: 0.04375,
+            &quot;accumulated_duration_str&quot;: &quot;43.75ms&quot;,
+            &quot;statements&quot;: [
+                {
+                    &quot;sql&quot;: &quot;select * from `product_custom_fields` where `id` = '8' and `client_id` = 1 and `product_custom_fields`.`deleted_at` is null limit 1&quot;,
+                    &quot;type&quot;: &quot;query&quot;,
+                    &quot;params&quot;: [],
+                    &quot;bindings&quot;: [
+                        &quot;8&quot;,
+                        &quot;1&quot;
+                    ],
+                    &quot;hints&quot;: [
+                        &quot;Use &lt;code&gt;SELECT *&lt;/code&gt; only if you need all columns from table&quot;,
+                        &quot;&lt;code&gt;LIMIT&lt;/code&gt; without &lt;code&gt;ORDER BY&lt;/code&gt; causes non-deterministic results, depending on the query execution plan&quot;
+                    ],
+                    &quot;backtrace&quot;: [],
+                    &quot;duration&quot;: 0.04375,
+                    &quot;duration_str&quot;: &quot;43.75ms&quot;,
+                    &quot;stmt_id&quot;: &quot;&quot;,
+                    &quot;connection&quot;: &quot;pedidos_digitais&quot;
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+
+<h2 id="errors">Errors</h2>
+<p><strong>Token não enviado</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Token not found.&quot;
+}
+</code></pre>
+
+<p><strong>Token inválido</strong></p>
+<p><em>Http status code 401</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Invalid token.&quot;
+}
+</code></pre>
+
+<p><strong>Campo não encontrado</strong></p>
+<p><em>Http status code 404</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Product not found.&quot;
+}
+</code></pre>
+
+<p><strong>Erro interno do servidor</strong></p>
+<p><em>Http status code 500</em></p>
+<pre><code class="json">{
+  &quot;error&quot;: &quot;Internal Server Error&quot;
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../create/" class="btn btn-neutral float-right" title="Cadastrar">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Listar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../create/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

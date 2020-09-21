@@ -7,24 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Visualizar - Api Pedidos Digitais</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
     var mkdocs_page_name = "Visualizar";
-    var mkdocs_page_input_path = "companies/show.md";
+    var mkdocs_page_input_path = "companies\\show.md";
     var mkdocs_page_url = null;
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Api Pedidos Digitais</a>
         <div role="search">
@@ -45,297 +47,165 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Início</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Grupos de usuários</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../groups/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../groups/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../groups/permissions/">Permissões</a>
-                </li>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Grupos de usuários</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../groups/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../groups/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../groups/permissions/">Permissões</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Usuários</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../users/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Clientes</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Listar</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Visualizar</a>
+    <ul class="current">
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Usuários</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../users/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../users/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../users/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../users/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../users/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Clientes</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../">Listar</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Visualizar</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#endpoint">Endpoint</a></li>
-    
-
-    <li class="toctree-l3"><a href="#headers">Headers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#response">Response</a></li>
-    
-
-    <li class="toctree-l3"><a href="#errors">Errors</a></li>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Lojas</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../stores/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../stores/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../stores/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../stores/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../stores/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Categorias</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../categories/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../categories/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../categories/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../categories/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../categories/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Produtos</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../products/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Imagem Produtos</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../products/images/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/images/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/images/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/images/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/images/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Variações precificadas</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../products/variations/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/variations/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/variations/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/variations/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../products/variations/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Status dos pedidos</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../orders/status/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../orders/status/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../orders/status/create/">Cadastrar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../orders/status/update/">Alterar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../orders/status/delete/">Remover</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Pedidos</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../orders/">Listar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../orders/show/">Visualizar</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../orders/update/">Alterar</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Uploads</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../uploads/create/">Enviar</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Lojas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../stores/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Categorias</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../categories/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Produtos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Imagem Produtos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/images/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Campos Personalizados</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_fields/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_fields/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_fields/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_fields/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_fields/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Valores dos Campos Personalizados</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../custom_values/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Variações precificadas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../products/variations/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Status dos pedidos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/create/">Cadastrar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/update/">Alterar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/status/delete/">Remover</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Pedidos</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/">Listar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/show/">Visualizar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../orders/update/">Alterar</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Uploads</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../uploads/create/">Enviar</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -364,6 +234,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -459,7 +330,7 @@
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -469,7 +340,7 @@
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -483,6 +354,11 @@
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
