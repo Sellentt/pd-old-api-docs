@@ -6,29 +6,6 @@ Listar os campos personalizados de um cliente.
 GET "https://app.pedidosdigitais.com.br/api/v2/custom_fields"
 ```
 
-# Query strings (Filters)
-
-| Field | Type                       | Description                                                           |
-| ----- | -------------------------- | --------------------------------------------------------------------- |
-| after | date (YYYY-MM-DDTHH:MM:SS) | Dos produtos alterados desta data em diante (ex: 2019-09-05T12:00:00) |
-| page  | integer                    | Paginação dos produtos                                                |
-
-**Observações**
-
-Quando é enviado o parâmetro `after` o sistema irá retornar todos os produtos que foram alterados desta data em diante, inclusive os produtos que foram _"removidos"_.
-
-Você pode identificar que um produto foi removido caso exista na chave `deleted_at` um valor preenchido. Esse valor é a data/hora que o produto foi removido.
-
-Veja abaixo um exemplo usando os dois parâmetros:
-
-```
-GET "https://app.pedidosdigitais.com.br/api/v2/products?page=1&after=2019-09-10"
-```
-
-Na requisição acima, o sistema irá retornar a primeira página (20 registros por página) dos produtos que foram alterados ou removidos do dia 10/09/2019 em diante.
-
-Passar o parâmetro `after` é uma ótima forma de criar uma rotina que irá atualizar seu sistema de tempos em tempos caso o cliente tenha feito alguma alteração de produto direto no painel do Pedidos Digitais.
-
 ## Headers
 
 ```
@@ -60,8 +37,8 @@ _http status code 200_
 }
   ],
   "links": {
-    "first": "https://app.pedidosdigitais.com.br/api/v2/products?page=1",
-    "last": "https://app.pedidosdigitais.com.br/api/v2/products?page=1",
+    "first": "https://app.pedidosdigitais.com.br/api/v2/custom_fields?page=1",
+    "last": "https://app.pedidosdigitais.com.br/api/v2/custom_fields?page=1",
     "prev": null,
     "next": null
   },
@@ -69,7 +46,7 @@ _http status code 200_
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "https://app.pedidosdigitais.com.br/api/v2/products",
+    "path": "https://app.pedidosdigitais.com.br/api/v2/custom_fields",
     "per_page": 20,
     "to": 3,
     "total": 3

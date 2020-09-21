@@ -52,7 +52,7 @@ _Http status code 404_
 
 ```json
 {
-  "error": "Product not found."
+  "error": "Custom Field not found."
 }
 ```
 
